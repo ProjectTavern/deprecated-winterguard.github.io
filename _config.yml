@@ -49,9 +49,9 @@ defaults:
       path: "projects"
       type: "pages"
     value:
-      layout: "project"
+      layout: "Wiki"
       author: "Arthur Emrys Gift"
-      category: "project"
+      category: "Wiki"
 
 
 liquid:
