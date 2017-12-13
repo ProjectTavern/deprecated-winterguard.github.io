@@ -43,7 +43,7 @@ timezone:      null
 
 quiet:    false
 verbose:  false
-defaults: [
+defaults:
   -
     scope:
       path: "projects"
@@ -52,7 +52,7 @@ defaults: [
       layout: "project"
       author: "Arthur Emrys Gift"
       category: "project"
-]
+
 
 liquid:
   error_mode: warn
