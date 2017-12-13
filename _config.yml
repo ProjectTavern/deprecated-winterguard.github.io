@@ -1,5 +1,5 @@
 # 파일 종류별 위치
-source:       .
+source:       ./_site
 destination:  ./_site
 plugins_dir:  ./_plugins
 layouts_dir:  ./_layouts
