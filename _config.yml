@@ -1,11 +1,13 @@
 # 파일 종류별 위치
-source:       ./_site
+source:       .
 destination:  ./_site
 plugins_dir:  ./_plugins
 layouts_dir:  ./_layouts
 data_dir:     ./_data
 includes_dir: ./_includes
 collections:  null
+
+baseurl: ""
 
 # 플러그인
 whitelist: []
