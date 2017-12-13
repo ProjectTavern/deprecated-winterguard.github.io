@@ -43,15 +43,7 @@ timezone:      null
 
 quiet:    false
 verbose:  false
-defaults:
-  -
-    scope:
-      path: "projects"
-      type: "pages"
-    value:
-      layout: "Wiki"
-      author: "Arthur Emrys Gift"
-      category: "Wiki"
+defaults: []
 
 
 liquid:
