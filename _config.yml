@@ -19,7 +19,7 @@ excerpt_separator: "\n\n"
 incremental: false
 
 # 출력 방식
-permalink:     date
+permalink:     /_site/date
 paginate: 5
 paginate_path: /_site/page:num
 timezone:      null
