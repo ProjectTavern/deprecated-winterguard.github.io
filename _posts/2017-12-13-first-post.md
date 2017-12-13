@@ -1,6 +1,5 @@
 ---
-layout: default
-permalink: default
+layout: post
 ---
 ## 지킬을 활용한 블로그 만들기 첫번째 포스트
 지킬을 활용한 블로그를 만들고 있는 중입니다.
