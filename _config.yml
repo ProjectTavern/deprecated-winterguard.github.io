@@ -32,14 +32,9 @@ lsi:         false
 excerpt_separator: "\n\n"
 incremental: false
 
-# 서버 작동
-detach:  false
-port:    4000
-host:    127.0.0.1
-baseurl: "" # does not include hostname
-
 # 출력 방식
 permalink:     date
+paginate: 5
 paginate_path: /page:num
 timezone:      null
 
