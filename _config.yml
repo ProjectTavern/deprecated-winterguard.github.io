@@ -35,7 +35,7 @@ incremental: false
 # 출력 방식
 permalink:     date
 paginate: 5
-paginate_path: /page:num
+paginate_path: /_site/page:num
 timezone:      null
 
 quiet:    false
