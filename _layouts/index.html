@@ -15,7 +15,7 @@ layout: default
     {% for post in site.posts %}
         <li>
             <span>{{ post.date | date_to_string }}</span>
-            <a href="{{ post.url }}">{{ post.title }}</a>
+            <a href="{{ _site + post.url }}">{{ post.title }}</a>
             {{ post.excerpt }}
             <p>{% post_url 2017-12-13-first-post %}</p>
         </li>
