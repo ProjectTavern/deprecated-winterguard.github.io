@@ -1,37 +1,18 @@
-## Welcome to GitHub Pages
+## 블로그 EmrysPage
 
-You can use the [editor on GitHub](https://github.com/GodfatherEmrys/Wiki/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+깃허브 페이지와 지킬을 활용하여 진행할 블로그 저장소입니다.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+기초지식을 위한 베이스캠프로 활용하고 싶은 마음으로 생성했습니다.
 
-### Markdown
+### 카테고리
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+앞으로 만들어나갈, 그리고 하고 싶은 것들의 카테고리 목록입니다.
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/GodfatherEmrys/Wiki/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+---
+카테고리:설명
+알고리즘: 기본 알고리즘들을 다룹니다.
+프로그래밍 문법: 문법 기초에 대한 전반적인 지식을 설명합니다.
+웹 표준: 웹 표준을 알아가보면서 기록합니다.
+웹 디자인: 웹 디자인에 대해 다룹니다.
+디자인 패턴: 디자인 패턴을 공부해봅니다. 특히 GOF.
+---
