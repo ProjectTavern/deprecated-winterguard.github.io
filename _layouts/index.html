@@ -14,8 +14,7 @@ layout: default
     {% for post in site.posts %}
         <li>
             <span>{{ post.date | date_to_string }}</span>
-            <a href="/Blog{{ post.url }}">{{ post.title }}</a>
-            {{ post.excerpt }}
+            <a href="/Blog{{ post.url }}">{{ post.excerpt }}</a>
         </li>
     {% endfor %}
     </ul>
