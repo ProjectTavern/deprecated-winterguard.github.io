@@ -8,12 +8,17 @@ layout: default
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ page.title }}</title>
+    <style>
+    .date {
+        font-size: 15px;
+    }
+    </style>
 </head>
 <body>
     <ul>
     {% for post in site.posts %}
         <li>
-            <h3><a href="/Blog{{ post.url }}">{{ post.title }}</a><span style="font-size: 9px;">{{ post.date | date_to_string }}</span></h3>
+            <h3><a href="/Blog{{ post.url }}">{{ post.title }}</a><span class="date">{{ post.date | date_to_string }}</span></h3>
             {{ post.excerpt | strip_html | truncatewords: 49 }}
         </li>
     {% endfor %}
