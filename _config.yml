@@ -12,5 +12,8 @@ permalink:     pretty
 paginate: 5
 paginate_path: /page:num
 
+# 변환
+excerpt_separator: "\n\n"
+
 # 테마
 theme: jekyll-theme-cayman
