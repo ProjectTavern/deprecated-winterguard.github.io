@@ -1,3 +1,4 @@
+# 자원
 source:       .
 destination:  ./_site
 plugins_dir:  ./_plugins
@@ -6,7 +7,10 @@ data_dir:     ./_data
 includes_dir: ./_includes
 collections:  null
 
+# 커넥트
 permalink:     pretty
+paginate: 5
 paginate_path: /page:num
 
+# 테마
 theme: jekyll-theme-cayman
