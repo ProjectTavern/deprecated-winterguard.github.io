@@ -13,7 +13,7 @@ layout: default
         font-size: 15px;
         color: black;
     }
-    .inheritColor {
+    .inherit-color {
         color: inherit;
     }
     ul {
@@ -30,7 +30,7 @@ layout: default
     <ul>
     {% for post in site.posts %}
         <li>
-            <h2><a href="/Blog{{ post.url }}" class="inheritColor">{{ post.title }}</a> <span class="date">| {{ post.date | date_to_long_string }}</span></h2>
+            <h2><a href="/Blog{{ post.url }}" class="inherit-color">{{ post.title }}</a> <span class="date">| {{ post.date | date_to_long_string }}</span></h2>
             {{ post.excerpt | strip_html | truncatewords: 49 }}
         </li>
         <hr>
