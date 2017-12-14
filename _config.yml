@@ -6,8 +6,4 @@ data_dir:     ./_data
 includes_dir: ./_includes
 collections:  null
 
-permalink:     /Blog/:date
-paginate_path: /Blog/page:num
-timezone:      null
-
 theme: jekyll-theme-cayman
