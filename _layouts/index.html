@@ -8,18 +8,13 @@ layout: default
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ page.title }}</title>
-    <style>
-    .a {
-        text-decoration: none;
-    }
-    </style>
 </head>
 <body>
     <ul>
     {% for post in site.posts %}
         <li>
+            <a href="/Blog{{ post.url }}">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</a>
             <span>{{ post.date | date_to_string }}</span>
-            <a href="/Blog{{ post.url }}">{{ post.excerpt }}</a>
         </li>
     {% endfor %}
     </ul>
