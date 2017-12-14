@@ -6,4 +6,7 @@ data_dir:     ./_data
 includes_dir: ./_includes
 collections:  null
 
+permalink:     /Blog/:year/:month/:day/:title/
+paginate_path: /page:num
+
 theme: jekyll-theme-cayman
