@@ -13,8 +13,7 @@ layout: default
     <ul>
     {% for post in site.posts %}
         <li>
-            <span>{{ post.date | date_to_string }}</span>
-            <a href="/Blog{{ post.url }}"><h3>{{ post.title }}</h3></a>
+            <h3><a href="/Blog{{ post.url }}">{{ post.title }}</a><span style="font-size: 9px;">{{ post.date | date_to_string }}</span></h3>
             {{ post.excerpt | strip_html | truncatewords: 49 }}
         </li>
     {% endfor %}
