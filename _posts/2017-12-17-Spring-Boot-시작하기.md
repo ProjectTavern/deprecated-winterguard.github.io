@@ -58,4 +58,10 @@ STS는 기본 베이스는 이클립스이고, STS가 미리 설치되어 있는
 @ComponentScan
 ~~~
 위 3개의 애노테이션을 모두 포함하고 있는 애노테이션이다.
-참조: [Yong's Blog](http://yonguri.tistory.com/12?category=359079)
+
+
+
+참조:
+
+[Yong's Blog](http://yonguri.tistory.com/12?category=359079)
+[동동이 블로그](http://blog.naver.com/PostView.nhn?blogId=shindonga89&logNo=220263793482)
