@@ -21,3 +21,4 @@ excerpt: 스프링 + 그래들
 @ComponentScan
 ~~~
 위 3개의 애노테이션을 모두 포함하고 있는 애노테이션이다.
+참조: [Yong's Blog](http://yonguri.tistory.com/12?category=359079)
