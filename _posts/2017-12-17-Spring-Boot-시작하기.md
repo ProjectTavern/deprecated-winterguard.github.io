@@ -63,5 +63,6 @@ STS는 기본 베이스는 이클립스이고, STS가 미리 설치되어 있는
 
 참조:
 
+[Spring Boot Reference Guide](https://docs.spring.io/spring-boot/docs/current/reference/html/)
 [Yong's Blog](http://yonguri.tistory.com/12?category=359079)
 [동동이 블로그](http://blog.naver.com/PostView.nhn?blogId=shindonga89&logNo=220263793482)
