@@ -49,12 +49,6 @@ layout: default
         </li>
         <hr>
     {% endfor %}
-    {% for post in site.categories.html.posts %}
-    <li>
-        <h2><a href="{{ post.url }}" class="inherit-color">{{ post.title }}</a> <span class="date">| {{ post.date | date_to_long_string }}</span></h2>
-        {{ post.excerpt | strip_html | truncatewords: 49 }}
-    </li>
-    {% endfor %}
     </ul>
     <!-- <div class="pagination">
         {% if paginator.previous_page %}
