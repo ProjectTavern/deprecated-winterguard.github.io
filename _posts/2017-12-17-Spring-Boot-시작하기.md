@@ -20,8 +20,8 @@ excerpt: 스프링 부트로 초간단 프로젝트 생성하기! 저도 한번 
 
 잘 모르는 초보(저도 초보지만 더 초보가 있을 수도 있으니까!~~없다~~)의 경우 아래 글을 먼저 읽고, 설치링크를 따라가는 것을 추천합니다.
 
-[이클립스 설치](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/oxygen1a)
-[STS 설치](https://spring.io/tools/sts/all)
+[이클립스 설치](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/oxygen1a)<br>
+[STS 설치](https://spring.io/tools/sts/all)<br>
 
 IDE는 이클립스로 할 것입니다.
 혹은 STS를 사용해도 됩니다.
@@ -63,6 +63,6 @@ STS는 기본 베이스는 이클립스이고, STS가 미리 설치되어 있는
 
 참조:
 
-[Spring Boot Reference Guide](https://docs.spring.io/spring-boot/docs/current/reference/html/)
-[Yong's Blog](http://yonguri.tistory.com/12?category=359079)
-[동동이 블로그](http://blog.naver.com/PostView.nhn?blogId=shindonga89&logNo=220263793482)
+[Spring Boot Reference Guide](https://docs.spring.io/spring-boot/docs/current/reference/html/)<br>
+[Yong's Blog](http://yonguri.tistory.com/12?category=359079)<br>
+[동동이 블로그](http://blog.naver.com/PostView.nhn?blogId=shindonga89&logNo=220263793482)<br>
