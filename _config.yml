@@ -11,3 +11,6 @@ collections:  null
 permalink:     pretty
 paginate: 5
 paginate_path: /page:num
+
+# 테마
+theme: jekyll-theme-cayman
