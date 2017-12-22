@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html lang="kr">
+{% include head.html %}
+<body>
+    {% include header.html %}
+    <ul>
+    {% for post in site.posts %}
+        <li>
+            <h2><a href="{{ post.url }}" class="inherit-color">{{ post.title }}</a> <span class="date">| {{ post.date | date_to_long_string }}</span></h2>
+            {{ post.excerpt | strip_html | truncatewords: 49 }}
+        </li>
+        <hr>
+    {% endfor %}
+    </ul>
+    <!-- <div class="pagination">
+        {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+        {% else %}
+            <span class="previous">Previous</span>
+        {% endif %}
+        <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+        {% else %}
+            <span class="next ">Next</span>
+        {% endif %}
+    </div> -->
+</body>
+</html>
