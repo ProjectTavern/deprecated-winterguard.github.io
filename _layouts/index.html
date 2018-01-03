@@ -5,7 +5,7 @@ layout: default
 <html lang="ko">
 {% include head.html %}
 <body>
-    {% include header.html %}
+    {% include categories.html %}
     <ul>
     {% for post in site.posts %}
         <li>
@@ -15,6 +15,7 @@ layout: default
         <hr>
     {% endfor %}
     </ul>
+    <button class="btn btn-primary">테스트 버튼</button>
     <!-- <div class="pagination">
         {% if paginator.previous_page %}
             <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
