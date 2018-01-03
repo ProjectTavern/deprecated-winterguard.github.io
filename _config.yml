@@ -8,6 +8,7 @@ includes_dir: ./_includes
 collections:  null
 
 github_username:  EmrysPage
+description: EmrysPage에서 제공하는 IT 기술 공부 블로그입니다. 초심자(본인)를 위한 내용으로 가득채울 예정입니다. 되도록이면 최신의 트렌드와 기술 정보들을 다루도록 노력하겠습니다. Java, Spring, HTML, CSS, Javascript, Node, Angular, React 등을 다루는 블로그입니다. 프로그래밍, 알고리즘 등도 다룹니다.
 
 # 커넥트
 permalink:     pretty
