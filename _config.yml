@@ -8,7 +8,7 @@ includes_dir: ./_includes
 collections:  null
 
 github_username:  EmrysPage
-
+name: EmrysPage
 
 # 커넥트
 permalink:     pretty
