@@ -1,11 +1,7 @@
 ---
 layout: default
 ---
-<!DOCTYPE html>
-<html lang="ko">
-{% include head.html %}
-<body>
-    {% include categories.html %}
+{% include categories.html %}
     <!-- 섹션을 삽입해볼 것 <section>대신 귀여운 섹션을 드리겠읍니다.<section/> -->
     <ul>
     {% for post in site.posts %}
@@ -30,5 +26,3 @@ layout: default
             <span class="next ">Next</span>
         {% endif %}
     </div> -->
-</body>
-</html>
