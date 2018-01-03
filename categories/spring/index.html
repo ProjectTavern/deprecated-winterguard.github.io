@@ -2,7 +2,7 @@
 layout: default
 ---
 {% include head.html %}
-{% include header.html %}
+{% include categories.html %}
     {% for post in site.categories.spring %}
     <li>
         <h2><a href="{{ post.url }}" class="inherit-color">{{ post.title }}</a> <span class="date">| {{ post.date | date_to_long_string }}</span></h2>

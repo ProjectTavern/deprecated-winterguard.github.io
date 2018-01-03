@@ -1,23 +1,21 @@
 ---
 layout: default
 ---
-<!DOCTYPE html>
-<html lang="ko">
-{% include head.html %}
-<body>
-    {% include categories.html %}
-    <!-- 섹션을 삽입해볼 것 <section>대신 귀여운 섹션을 드리겠읍니다.<section/> -->
-    <ul>
+{% include categories.html %}
+<!-- 섹션을 삽입해볼 것 <section>대신 귀여운 섹션을 드리겠읍니다.<section/> -->
+<ul>
     {% for post in site.posts %}
-        <li>
-            <h2><a href="{{ post.url }}" class="inherit-color">{{ post.title }}</a> <span class="date">| {{ post.date | date_to_long_string }}</span></h2>
-            {{ post.excerpt | strip_html | truncatewords: 49 }}
-        </li>
-        <hr>
-    {% endfor %}
-    </ul>
-    <button class="btn btn-primary">테스트 버튼</button>
-    <!-- <div class="pagination">
+    <li>
+        <h2>
+            <a href="{{ post.url }}" class="inherit-color">{{ post.title }}</a>
+            <span class="date">| {{ post.date | date_to_long_string }}</span>
+        </h2>
+        {{ post.excerpt | strip_html | truncatewords: 49 }}
+    </li>
+    <hr> {% endfor %}
+</ul>
+<button class="btn btn-primary">테스트 버튼</button>
+<!-- <div class="pagination">
         {% if paginator.previous_page %}
             <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
         {% else %}
@@ -30,5 +28,3 @@ layout: default
             <span class="next ">Next</span>
         {% endif %}
     </div> -->
-</body>
-</html>
