@@ -7,8 +7,7 @@ data_dir:     ./_data
 includes_dir: ./_includes
 collections:  null
 
-
-site_name: EmrysPage
+github_username:  EmrysPage
 
 # 커넥트
 permalink:     pretty
