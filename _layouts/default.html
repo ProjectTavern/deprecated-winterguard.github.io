@@ -2,10 +2,11 @@
 <html lang="ko-kr">
     {% include head.html %}
 <body class="flex">
-    <div style="flex: 2; order: 1; position: absolute">
+    <div style="flex: 2; order: 1; position: fixed; z-index: 1">
     {% include main_title.html %}
     {% include categories.html %}
     </div>
+    <div style="flex: 2; order: 1"></div>
     <section style="flex:8;order:2">
     {{ content }}
     </section>
