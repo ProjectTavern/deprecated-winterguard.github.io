@@ -2,11 +2,11 @@
 <html lang="ko-kr">
     {% include head.html %}
 <body class="flex">
-    <div>
+    <div style="flex:3;order:1">
     {% include main_title.html %}
     {% include categories.html %}
     </div>
-    <section>
+    <section style="flex:7;order:2">
     {{ content }}
     </section>
 </body>
