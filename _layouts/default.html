@@ -2,14 +2,14 @@
 <html lang="ko-kr">
     {% include head.html %}
 <body class="flex">
-    <div class="main_header">
+    <header class="main_header">
     {% include main_title.html %}
     {% include categories.html %}
     {% include banner.html %}
-    </div>
+    </header>
     <div class="copy_header"></div>
-    <section class="main_content">
+    <main class="main_content" role="main">
     {{ content }}
-    </section>
+    </main>
 </body>
 </html>
