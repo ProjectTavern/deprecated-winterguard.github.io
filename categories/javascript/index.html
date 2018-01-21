@@ -4,7 +4,8 @@ layout: default
 <ul>
 {% for post in site.categories.javascript %}
     <li>
-        <h2><a href="{{ post.url }}" class="inherit-color">{{ post.title }}</a> <span class="date">| {{ post.date | date_to_long_string }}</span></h2>
+        <h2><a href="{{ post.url }}" class="inherit-color">{{ post.title }}</a></h2>
+        <date class="date">{{ post.date | date_to_string }}</date>
         {{ post.excerpt | strip_html | truncatewords: 49 }}
     </li>
 {% endfor %}
