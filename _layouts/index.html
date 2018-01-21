@@ -8,7 +8,7 @@ layout: default
             <a href="{{ post.url }}" class="inherit-color">{{ post.title }}</a>
             <br>
             <span class="date">
-                {{ page.date | date: '%Y 년 %M 월 %d 일'}}
+                {{ page.date | date: '%Y-%M-%d'}}
             </span>
         </h2>
         {{ post.excerpt | strip_html | truncatewords: 49 }}
