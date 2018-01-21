@@ -7,7 +7,7 @@ layout: default
         <h2>
             <a href="{{ post.url }}" class="inherit-color">{{ post.title }}</a>
             <br>
-            <span class="date">{{ post.date | %Y년 }}</span>
+            <span class="date">{{ post.date | %Y }}</span>
         </h2>
         {{ post.excerpt | strip_html | truncatewords: 49 }}
     </li>
