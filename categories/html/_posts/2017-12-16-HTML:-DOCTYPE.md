@@ -11,10 +11,9 @@ excerpt: "DOCTYPE은 HTML 문서 최상단에 위치하여 웹 브라우저에�
 HTML 문서를 만들기 전에 문서의 유형(document type)을 지정하는 것을 "<!DOCTYPE>"이라고 합니다.
 문서 유형은 웹 브라우저에게 어떤 문서의 유형인지 알려주고 그 버전에 맞는 방법으로 해석하라는 것을 알리는 역할을 합니다.
 HTML5에서부터는 아래와 같은 방법으로 간단하게 DOCTYPE 선언을 해줄 수 있습니다.
-
-~~~html
+{% highlight html %}
 <!DOCTYPE html>
-~~~
+{% endhighlight %}
 
 ## HTML 버전 종류별 DOCTYPE 선언 방법
 <hr>
@@ -25,55 +24,55 @@ HTML5에서부터는 아래와 같은 방법으로 간단하게 DOCTYPE 선언�
 ### HTML5
 <hr>
 HTML5에서는 현재 문서가 HTML 문서라는 점만 표기하는 것으로 문서 유형의 선언이 종료됩니다. 과거에는 엄격한 모드(Strict)인지, 호환 가능 모드(Transitional)인지 구별했었습니다.
-~~~html
+{% highlight html %}
 <!DOCTYPE html>
-~~~
+{% endhighlight %}
 
 ### HTML 4.01 Strict DTD
 <hr>
 Traditional DTD에서 deprecated된 요소와 <frameset> 관련 요소 및 속성을 제외한 가장 엄격한 DTD입니다.
-~~~html
+{% highlight html %}
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-~~~
+{% endhighlight %}
 
 ### HTML 4.01 Transitional DTD
 <hr>
 Strict DTD에서 deprecated 요소와 속성을 포함합니다. 권장되지 않는 요소나 속성을 문서에 포함할 필요가 있을 때, 하위 호환성을 위해 이 선언문을 사용하면 됩니다. Frameset관련 요소는 포함되지 않습니다.
-~~~html
+{% highlight html %}
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-~~~
+{% endhighlight %}
 
 ### HTML 4.01 Frameset DTD
 <hr>
 Traditionl DTD에 frameset을 포함합니다. Frameset을 적용한 문서에서는 이 선언문을 사용해야 합니다. 가장 느슨한 문서 형식입니다.
-~~~html
+{% highlight html %}
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
-~~~
+{% endhighlight %}
 
 ### XHTML 1.0 Strict DTD
 <hr>
-~~~xhtml
+{% highlight xhtml %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-~~~
+{% endhighlight %}
 
 ### XHTML 1.0 Transitional DTD
 <hr>
-~~~xhtml
+{% highlight xhtml %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-~~~
+{% endhighlight %}
 
 ### XHTML 1.0 Frameset DTD
 <hr>
-~~~xhtml
+{% highlight xhtml %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
-~~~
+{% endhighlight %}
 
 ### XHTML 1.1
 <hr>
 XHTML 1.1에서는 하나의 DTD만 정의할 수 있습니다. 이것은 기존의 XHTML 1.0 Strict DTD를 기본으로 합니다.
-~~~xhtml
+{% highlight xhtml %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-~~~
+{% endhighlight %}
 
 ## Strict
 <hr>

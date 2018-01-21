@@ -53,13 +53,13 @@ STS는 기본 베이스는 이클립스이고, STS가 미리 설치되어 있는
 {% endhighlight %}
 
 위의 애노테이션은
-~~~
+{% highlight java %}
 @SpringBootConfiguration
 @EnableAutoConfiguration
 @ComponentScan
-~~~
-위 3개의 애노테이션을 모두 포함하고 있는 애노테이션이다.
+{% endhighlight %}
 
+위 3개의 애노테이션을 모두 포함하고 있는 애노테이션이다.
 
 
 참조:
