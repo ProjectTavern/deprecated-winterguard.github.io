@@ -48,9 +48,10 @@ STS는 기본 베이스는 이클립스이고, STS가 미리 설치되어 있는
 
 ## @SpringBootApplication 애노테이션
 
-~~~
+{% highlight java %}
 @SpringBootApplication
-~~~
+{% endhighlight %}
+
 위의 애노테이션은
 ~~~
 @SpringBootConfiguration
