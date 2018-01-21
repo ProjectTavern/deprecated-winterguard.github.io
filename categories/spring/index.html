@@ -6,6 +6,7 @@ layout: default
     <li>
         <h2><a href="{{ post.url }}" class="inherit-color">{{ post.title }}</a></h2>
         | <date class="date">{{ post.date | date_to_string }}</date>
+        <hr>
         {{ post.excerpt | strip_html | truncatewords: 49 }}
     </li>
 {% endfor %}
