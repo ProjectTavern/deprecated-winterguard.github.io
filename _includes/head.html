@@ -25,24 +25,28 @@
     audio, canvas, video {display:inline-block;*display:inline;*zoom:1}
     input::-ms-clear {display:none}
     header,article,aside,footer,section{display:block}
+    
     /* Start Cascading Style Sheet */
-    body{font-weight:200}
-    ul{list-style:none;display:inline}
-    a{color:black;text-decoration:none;position:relative}
-    a:link,a:visited{color:Black;cursor:auto}
-    a:link:active,a:visited:active{color:Black}
-    a:hover{
-      background-color: #ffaef8;
-      border-radius:5px;
-      /* box-shadow: 0px -7px 0px 0px #ffaef8 inset; */
-      /* box-shadow: 0px -10px 10px -5px red inset; */
-      /* border-bottom: 3px solid #ffaef8; */
+    @media all and (min-width:1024px){
+    /* 1024px 보다 화면의 너비가 좁은 경우 */
+      ul{list-style:none;display:inline}
+      a{color:black;text-decoration:none;position:relative}
+      a:link,a:visited{color:Black;cursor:auto}
+      a:link:active,a:visited:active{color:Black}
+      a:hover{
+        background-color: #ffaef8;
+        border-radius:5px;
+        /* box-shadow: 0px -7px 0px 0px #ffaef8 inset; */
+        /* box-shadow: 0px -10px 10px -5px red inset; */
+        /* border-bottom: 3px solid #ffaef8; */
+      }
+      .main_header{position:fixed;width:200px}
+      .main_content{margin-left:200px;width:100%;min-width:960px;}
+      .date{font-size:15px;color:grey;display:block}
+      .categories{text-align:right;font-size:1.5em;font-weight:bold}
+      .categories li{margin-right:30px}
     }
-    .main_header{position:fixed;width:200px}
-    .main_content{margin-left:200px;width:100%;min-width:960px;}
-    .date{font-size:15px;color:grey;display:block}
-    .categories{text-align:right;font-size:1.5em;font-weight:bold}
-    .categories li{margin-right:30px}
+    body{font-weight:200}
     figure{display:inline-block;width:50%;border:0.5px solid grey}
   </style>
   <link rel="stylesheet"
