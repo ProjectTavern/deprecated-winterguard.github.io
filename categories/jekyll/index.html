@@ -5,7 +5,7 @@ layout: default
 {% for post in site.categories.jekyll %}
     <li>
         <h2><a href="{{ post.url }}" class="inherit-color">{{ post.title }}</a></h2>
-        <date class="date">{{ post.date | date_to_string }}</date>
+        <span class="date">{{ post.date | date_to_string }}</span>
         {{ post.excerpt | strip_html | truncatewords: 49 }}
     </li>
 {% endfor %}
