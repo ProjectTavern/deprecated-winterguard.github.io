@@ -33,7 +33,7 @@ HTML5에서는 현재 문서가 HTML 문서라는 점만 표기하는 것으로 
 ### HTML 4.01 Strict DTD
 Traditional DTD에서 deprecated된 요소와 <frameset> 관련 요소 및 속성을 제외한 가장 엄격한 DTD입니다.
 {% highlight html %}
-  
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 
 {% endhighlight %}
