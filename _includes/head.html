@@ -26,7 +26,31 @@
     input::-ms-clear {display:none}
     header,article,aside,footer,section{display:block}
     
-    /* Start Cascading Style Sheet */
+    body {
+      font-weight: 200
+    }
+    
+    .hiddenType {
+      display: none;
+    }
+    
+    .blogTitle {
+      font-size: 2.5em;
+      font-weight: 900;
+    }
+    
+    pre code {
+      display: inline-block;
+      width: 75%;
+      border: 0.5px solid grey;
+    }
+    
+    .date {
+      display: block;
+    }
+    
+    
+        /* Start Cascading Style Sheet */
     @media all and (min-width:1024px){
     /* 1024px 보다 화면의 너비가 좁은 경우 */
       ul { 
@@ -88,29 +112,6 @@
         border: 0.5px solid grey;
       }
       
-    }
-    
-    body {
-      font-weight: 200
-    }
-    
-    .hiddenType {
-      display: none;
-    }
-    
-    .blogTitle {
-      font-size: 2.5em;
-      font-weight: 900;
-    }
-    
-    pre code {
-      display: inline-block;
-      width: 75%;
-      border: 0.5px solid grey;
-    }
-    
-    .date {
-      display: block;
     }
   </style>
 <!--   <link rel="stylesheet"
