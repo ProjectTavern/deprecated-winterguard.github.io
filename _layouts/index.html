@@ -4,7 +4,7 @@ layout: default
 <ul>
     {% for post in site.posts %}
     <li>
-        <strong>
+        <strong role="post_title">
             <a href="{{ post.url }}" class="inherit-color">{{ post.title }}</a>
         </strong>
         <date class="date">{{ post.date | date_to_string }}</date>
