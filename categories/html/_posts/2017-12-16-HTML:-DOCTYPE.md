@@ -20,7 +20,7 @@ HTML5에서부터는 아래와 같은 방법으로 간단하게 DOCTYPE 선언�
 ## HTML 버전 종류별 DOCTYPE 선언 방법
 이런 DOCTYPE을 선언해주는 이유는 [HTML별로 지원하는 태그의 종류](https://www.w3schools.com/tags/ref_html_dtd.asp)가 조금씩 다르기 때문입니다.
 
-다음은 HTML DOCTYPE 버전의 정류와 DOCTYPE 선언방법입니다.
+다음은 HTML DOCTYPE 버전의 류와 DOCTYPE 선언방법입니다.
 
 ### HTML5
 HTML5에서는 현재 문서가 HTML 문서라는 점만 표기하는 것으로 문서 유형의 선언이 종료됩니다. 과거에는 엄격한 모드(Strict)인지, 호환 가능 모드(Transitional)인지 구별했었습니다.
