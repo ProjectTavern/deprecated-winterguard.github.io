@@ -1,9 +1,18 @@
 ---
 layout: default
 ---
+<style>
+    .list_categories {
+        display: block;
+    }
+    .list_categories a {
+        display: block;
+        height: 100%;
+    }
+</style>
 <ul>
     {% for post in site.posts %}
-    <li>
+    <li class="list_categories">
         <strong role="post_title">
             <a href="{{ post.url }}" class="inherit-color">{{ post.title }}</a>
         </strong>
