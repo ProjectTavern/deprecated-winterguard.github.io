@@ -163,5 +163,10 @@ table {
 	console.log("Test Code");
 		location.hash = "time";
 		console.log("Test Code!");
+	$(window).bind("pageshow", function(event) {
+    if (event.originalEvent.persisted) {
+      alert("From back / forward cache.");
+    }
+});
 	</script>
 </head>
