@@ -163,6 +163,7 @@ table {
 	console.log("Test Code");
 	var time = 0;
 	$("a").on("click", () => {
+		console.log(time);
 		time++;
 		location.hash = time;
 	});
