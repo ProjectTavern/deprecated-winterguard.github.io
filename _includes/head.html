@@ -160,13 +160,17 @@ table {
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 <script>
-$.ajax({
-    url: "//promo.search.daum.net/daum/kakao/plusfriend/find?eventId=110",
-    dataType: "JSONP"
-}).done(function(data) {
-    console.log(data);
-}).fail(function(err){
-    console.log(err);
-})
-	</script>
+$.debounce(5000, function ajaxTest () {
+    console.log("Debounced!");
+    $.ajax({
+        url: "//promo.search.daum.net/daum/kakao/plusfriend/find?eventId=110",
+        dataType: "JSONP"
+    }).done(function(data) {
+        console.log(data);
+    }).fail(function(err){
+        console.log(err);
+    });
+});
+
+</script>
 </head>
