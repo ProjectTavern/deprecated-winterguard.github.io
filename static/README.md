@@ -1,11 +1,23 @@
-# STATIC
+# Bonfire
 
-**This directory is not required, you can delete it if you don't want to use it.**
+> The Wintergaurd's Logde
+> 1. 개발브랜치: develop
+> 2. 배포브랜치: master
 
-This directory contains your static files.
-Each file inside this directory is mapped to `/`.
-Thus you'd want to delete this README.md before deploying to production.
+## 구성
 
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
+### 학습
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/guide/assets#static).
+> 직접 따라해보며 새로운 것을 얻을 수 있는
+
+### 지식
+
+> 보고 읽는 것으로 습득할 수 있는
+
+### 새소식
+
+> 새로운
+
+### 일지
+
+> 기록
