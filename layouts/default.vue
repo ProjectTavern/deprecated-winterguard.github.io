@@ -61,6 +61,11 @@ export default {
           icon: 'bubble_chart',
           title: '일지',
           to: '/logbook'
+        },
+        {
+          icon: 'bubble_chart',
+          title: '코드폴리오',
+          to: '/codefolio'
         }
       ],
       miniVariant: true,
