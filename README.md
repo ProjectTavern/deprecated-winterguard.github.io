@@ -1,6 +1,6 @@
-# bonfire
+# Bonfire
 
-> Wintergaurd&#39;s Lodge
+> Wintergaurd's Lodge
 
 ## Build Setup
 
@@ -19,4 +19,14 @@ $ npm start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+## Deploy
+
+> You can deploy production for static github page. 
+
+``` bash
+# github page deploy
+$ npm run deploy
+```
+
+1. generate nuxt dist
+2. push dist to branch master
