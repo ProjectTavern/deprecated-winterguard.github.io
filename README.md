@@ -30,3 +30,7 @@ $ npm run deploy
 
 1. generate nuxt dist
 2. push dist to branch master
+
+## nuxt.config.js
+
+> Nuxtjs config file
