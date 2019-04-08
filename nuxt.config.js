@@ -79,5 +79,14 @@ module.exports = {
         })
       }
     }
+  },
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: 'posts',
+        path: '/post/:title',
+        component: resolve(__dirname, 'pages/post.vue')
+      });
+    }
   }
 };
