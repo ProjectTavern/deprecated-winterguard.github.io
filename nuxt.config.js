@@ -1,5 +1,7 @@
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
 const pkg = require('./package');
+const {postSet, siteMap} = require('./project/modules/directory');
+
 
 module.exports = {
   mode: 'universal',
@@ -80,11 +82,16 @@ module.exports = {
       }
     }
   },
+
+  generate: {
+    routes: siteMap
+  },
+
   router: {
     extendRoutes(routes, resolve) {
       routes.push({
         name: 'posts',
-        path: '/post/:title',
+        path: '/study/:title',
         component: resolve(__dirname, 'pages/post.vue')
       });
     }
