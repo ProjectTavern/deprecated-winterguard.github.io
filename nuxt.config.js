@@ -91,7 +91,7 @@ module.exports = {
     extendRoutes(routes, resolve) {
       routes.push({
         name: 'posts',
-        path: '/study/:title',
+        path: '/posts/:subject/:title',
         component: resolve(__dirname, 'pages/post.vue')
       });
     }
