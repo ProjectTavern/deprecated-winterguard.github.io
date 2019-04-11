@@ -1,5 +1,6 @@
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
 const pkg = require('./package');
+const webpack = require('./webpack');
 const { postSet, siteMap } = require('./project/modules/directory');
 
 module.exports = {
@@ -60,7 +61,12 @@ module.exports = {
    */
   build: {
     transpile: ['vuetify/lib'],
-    plugins: [new VuetifyLoaderPlugin()],
+    plugins: [
+      new VuetifyLoaderPlugin(),
+      new webpack.DefinePlugin({
+        postSet: postSet
+      })
+    ],
     loaders: {
       stylus: {
         import: ['~assets/style/variables.styl']
