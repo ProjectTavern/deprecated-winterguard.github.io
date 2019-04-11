@@ -16,9 +16,9 @@ async function start() {
   // Build only in dev mode
   if (config.dev) {
     const builder = new Builder(nuxt);
-    await builder.build()
+    await builder.build();
   } else {
-    await nuxt.ready()
+    await nuxt.ready();
   }
 
   // Give nuxt middleware to express
@@ -29,6 +29,6 @@ async function start() {
   consola.ready({
     message: `Server listening on http://${host}:${port}`,
     badge: true
-  })
+  });
 }
 start();

@@ -1,7 +1,6 @@
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
 const pkg = require('./package');
-const {postSet, siteMap} = require('./project/modules/directory');
-
+const { postSet, siteMap } = require('./project/modules/directory');
 
 module.exports = {
   mode: 'universal',
@@ -78,7 +77,7 @@ module.exports = {
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/
-        })
+        });
       }
     }
   },
