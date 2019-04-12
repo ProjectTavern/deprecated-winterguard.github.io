@@ -45,27 +45,27 @@ export default {
         {
           icon: 'bubble_chart',
           title: '소식',
-          to: '/news'
+          to: '/post/news'
         },
         {
           icon: 'bubble_chart',
           title: '지식',
-          to: '/knowledge'
+          to: '/post/knowledge'
         },
         {
           icon: 'bubble_chart',
           title: '학습',
-          to: '/learn'
+          to: '/post/learn'
         },
         {
           icon: 'bubble_chart',
           title: '일지',
-          to: '/logbook'
+          to: '/post/logbook'
         },
         {
           icon: 'bubble_chart',
           title: '코드폴리오',
-          to: '/codefolio'
+          to: '/post/codefolio'
         }
       ],
       miniVariant: true,

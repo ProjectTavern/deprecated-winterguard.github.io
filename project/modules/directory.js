@@ -18,7 +18,7 @@ const postDirectory = path.join(__dirname, targetPath);
       const postPath = fileAddress.replace('.md', '');
       const path = postPath.replace(postDirectory + '/', '');
       const title = postPath.replace(directory + '/', '');
-      const siteRoute = postPath.replace(postDirectory, '/post');
+      const siteRoute = postPath.replace(postDirectory, '');
       siteMap.push(siteRoute);
       postList.push({ title, path });
     }

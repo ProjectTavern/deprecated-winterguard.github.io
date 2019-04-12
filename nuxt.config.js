@@ -1,8 +1,8 @@
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
 const pkg = require('./package');
-const webpack = require('./webpack');
+const webpack = require('webpack');
 const { postSet, siteMap } = require('./project/modules/directory');
-
+console.log(siteMap);
 module.exports = {
   mode: 'universal',
 
@@ -89,16 +89,16 @@ module.exports = {
   },
 
   generate: {
-    routes: siteMap
+    // routes: siteMap
   },
 
   router: {
-    extendRoutes(routes, resolve) {
-      routes.push({
-        name: 'posts',
-        path: '/posts/:subject/:title',
-        component: resolve(__dirname, 'pages/post.vue')
-      });
-    }
+    // extendRoutes(routes, resolve) {
+    //   routes.push({
+    //     name: 'post',
+    //     path: '/post/:subject/:article',
+    //     component: resolve(__dirname, 'pages/post.vue')
+    //   });
+    // }
   }
 };
