@@ -86,19 +86,5 @@ module.exports = {
         });
       }
     }
-  },
-
-  generate: {
-    // routes: siteMap
-  },
-
-  router: {
-    // extendRoutes(routes, resolve) {
-    //   routes.push({
-    //     name: 'post',
-    //     path: '/post/:subject/:article',
-    //     component: resolve(__dirname, 'pages/post.vue')
-    //   });
-    // }
   }
 };
