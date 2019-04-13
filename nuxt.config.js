@@ -1,8 +1,8 @@
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
-const pkg = require('./package');
 const webpack = require('webpack');
-const { postSet, siteMap } = require('./project/modules/directory');
-console.log(siteMap);
+const pkg = require('./package');
+const { postSet } = require('./project/modules/directory');
+
 module.exports = {
   mode: 'universal',
 
