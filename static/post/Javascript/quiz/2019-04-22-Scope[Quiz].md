@@ -1,6 +1,8 @@
-# Scope
+# (논리)
 
-## 문제
+## 출력에 관하여
+
+### 문제
 
 > 다음 콘솔 로그 6개의 결과를 출력하는 순서대로 적어주세요.
 
@@ -31,15 +33,4 @@ function printMenu() {
 }
 
 printMenu();
-```
-
-## 답안
-
-```
-undefined
-Latte
-Latte
-undefined
-Iced Coffee
-Cold brew
 ```
