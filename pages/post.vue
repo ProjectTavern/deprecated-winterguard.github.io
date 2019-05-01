@@ -1,6 +1,16 @@
 <template>
-  <v-layout column justify-center align-center>
-    <div>post.vue</div>
+  <v-flex>
+    {{ subject }}
     <nuxt-child></nuxt-child>
-  </v-layout>
+  </v-flex>
 </template>
+
+<script>
+export default {
+  computed: {
+    subject() {
+      return this.$route.params.subject;
+    }
+  }
+};
+</script>

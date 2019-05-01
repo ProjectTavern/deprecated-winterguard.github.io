@@ -1,6 +1,6 @@
 <template>
   <v-system-bar window color="#fff" fixed app>
-    <v-btn to="/" flat height="10" color="blue" small="true" style="margin:0">
+    <v-btn to="/" flat height="10" color="blue" small style="margin:0">
       {{ commandCenter.title }}
     </v-btn>
     <v-icon></v-icon>
@@ -17,7 +17,8 @@ export default {
     return {
       commandCenter: {
         title: 'winterguard.github.io'
-      }
+      },
+      small: true
     };
   }
 };

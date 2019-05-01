@@ -1,43 +1,23 @@
 <template>
-  <v-card>
-    <div>{{ subject }}</div>
-    <nuxt-child v-if="article"></nuxt-child>
-    <v-container fluid grid-list-lg>
-      <v-layout row wrap>
-        <v-flex
-          v-for="(articleItem, index) in articles"
-          :key="index"
-          :to="articleItem.to"
-          router
-          exact
-          xs12
-        >
-          <v-card color="green" class="white--text">
-            <v-layout>
-              <v-flex xs2>
-                <v-img
-                  src="https://cdn.vuetifyjs.com/images/cards/halcyon.png"
-                  height="125px"
-                  contain
-                ></v-img>
-              </v-flex>
-              <v-flex xs10>
-                <v-card-title primary-title>
-                  <div class="headline">{{ articleItem.title }}</div>
-                  <span>
-                    {{ articleItem.to }}
-                  </span>
-                </v-card-title>
-              </v-flex>
-              <v-card-actions>
-                <v-btn flat dark>Listen now</v-btn>
-              </v-card-actions>
-            </v-layout>
-          </v-card>
-        </v-flex>
-      </v-layout>
-    </v-container>
-  </v-card>
+  <v-list v-if="!articleData" three-line>
+    <template v-for="(article, index) in articles">
+      <v-list-tile :key="index" ripple avatar :to="'news/' + article.to">
+        <v-list-tile-avatar>
+          <img :src="article.avatar" />
+        </v-list-tile-avatar>
+        <v-list-tile-content>
+          <v-list-tile-title v-html="article.title"></v-list-tile-title>
+          <v-list-tile-sub-title
+            v-html="article.subtitle"
+          ></v-list-tile-sub-title>
+        </v-list-tile-content>
+      </v-list-tile>
+      <v-divider
+        v-if="index + 1 < articles.length"
+        :key="`divider-${index}`"
+      ></v-divider>
+    </template>
+  </v-list>
 </template>
 
 <script>
@@ -47,25 +27,57 @@ export default {
       articles: [
         {
           to: '2019-04-10-New-start',
-          title: 'New-start'
+          title: '블로그를 새로 개장하는 중입니다.',
+          subtitle:
+            '블로그를 새로 개장하기 위해서는 어떤 것이 필요할까요? 구조를 어떻게 짜야할까요? 디자인은 어떻게 해야 좋을까요? 어떤 내용을 담으려고 하는 걸까요?'
         },
         {
           to: '2019-04-10-New-start',
-          title: 'New-start'
+          title: '블로그를 새로 개장하는 중입니다.',
+          subtitle:
+            '블로그를 새로 개장하기 위해서는 어떤 것이 필요할까요? 구조를 어떻게 짜야할까요? 디자인은 어떻게 해야 좋을까요? 어떤 내용을 담으려고 하는 걸까요?'
         },
         {
           to: '2019-04-10-New-start',
-          title: 'New-start'
+          title: '블로그를 새로 개장하는 중입니다.',
+          subtitle:
+            '블로그를 새로 개장하기 위해서는 어떤 것이 필요할까요? 구조를 어떻게 짜야할까요? 디자인은 어떻게 해야 좋을까요? 어떤 내용을 담으려고 하는 걸까요?'
+        },
+        {
+          to: '2019-04-10-New-start',
+          title: '블로그를 새로 개장하는 중입니다.',
+          subtitle:
+            '블로그를 새로 개장하기 위해서는 어떤 것이 필요할까요? 구조를 어떻게 짜야할까요? 디자인은 어떻게 해야 좋을까요? 어떤 내용을 담으려고 하는 걸까요?'
+        },
+        {
+          to: '2019-04-10-New-start',
+          title: '블로그를 새로 개장하는 중입니다.',
+          subtitle:
+            '블로그를 새로 개장하기 위해서는 어떤 것이 필요할까요? 구조를 어떻게 짜야할까요? 디자인은 어떻게 해야 좋을까요? 어떤 내용을 담으려고 하는 걸까요?'
+        },
+        {
+          to: '2019-04-10-New-start',
+          title: '블로그를 새로 개장하는 중입니다.',
+          subtitle:
+            '블로그를 새로 개장하기 위해서는 어떤 것이 필요할까요? 구조를 어떻게 짜야할까요? 디자인은 어떻게 해야 좋을까요? 어떤 내용을 담으려고 하는 걸까요?'
+        },
+        {
+          to: '2019-04-10-New-start',
+          title: '블로그를 새로 개장하는 중입니다.',
+          subtitle:
+            '블로그를 새로 개장하기 위해서는 어떤 것이 필요할까요? 구조를 어떻게 짜야할까요? 디자인은 어떻게 해야 좋을까요? 어떤 내용을 담으려고 하는 걸까요?'
         }
       ]
     };
   },
   computed: {
-    subject() {
-      return this.$route.params.subject;
-    },
-    article() {
+    articleData() {
       return this.$route.params.article;
+    }
+  },
+  methods: {
+    test() {
+      console.log(0);
     }
   }
 };

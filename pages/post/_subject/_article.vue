@@ -9,6 +9,7 @@ export default {
       return this.$route.params.subject;
     },
     markdown() {
+      console.log('Test');
       return require('~/static/post/logbook/2019-04-10-New-start.md');
     }
   }
