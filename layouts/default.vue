@@ -1,75 +1,25 @@
 <template>
   <v-app>
-    <v-navigation-drawer mobile-break-point="640" width="180" app>
-      <v-list>
-        <v-list-tile
-          v-for="(subject, index) in subjects"
-          :key="index"
-          :to="subject.to"
-          router
-          exact
-        >
-          <v-list-tile-action>
-            <v-icon>{{ subject.icon }}</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title v-text="subject.title" />
-          </v-list-tile-content>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
+    <SystemBar></SystemBar>
+    <NavigationDrawer></NavigationDrawer>
     <v-content>
       <nuxt />
     </v-content>
-    <v-footer :fixed="fixed" dark height="auto" app>
-      <v-card class="flex" flat tile>
-        <v-card-actions class="darken-3 justify-center">
-          &copy;2019 <strong class="pl-2">alias Winterguard Bonfire</strong>
-        </v-card-actions>
-      </v-card>
-    </v-footer>
+    <Footer></Footer>
   </v-app>
 </template>
 
 <script>
+// nuxt-child 로 사용하는 것이 낫지 않을까 ?
+import SystemBar from '~/components/Layouts/SystemBar';
+import NavigationDrawer from '~/components/Layouts/NavigationDrawer';
+import Footer from '~/components/Layouts/Footer';
+
 export default {
-  data() {
-    return {
-      subjects: [
-        {
-          icon: 'apps',
-          title: '메인',
-          to: '/'
-        },
-        {
-          icon: 'bubble_chart',
-          title: '소식',
-          to: '/post/news'
-        },
-        {
-          icon: 'bubble_chart',
-          title: '지식',
-          to: '/post/knowledge'
-        },
-        {
-          icon: 'bubble_chart',
-          title: '학습',
-          to: '/post/learn'
-        },
-        {
-          icon: 'bubble_chart',
-          title: '일지',
-          to: '/post/logbook'
-        },
-        {
-          icon: 'bubble_chart',
-          title: '코드폴리오',
-          to: '/post/codefolio'
-        }
-      ],
-      fixed: true,
-      title: '윈터가드 오두막'
-    };
+  components: {
+    SystemBar,
+    NavigationDrawer,
+    Footer
   }
 };
 </script>
