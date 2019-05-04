@@ -1,30 +1,29 @@
 <template>
-  <v-list v-if="!articleData" three-line>
-    <template v-for="(article, index) in articles">
-      <v-list-tile :key="index" ripple avatar :to="'news/' + article.to">
+  <v-list v-if="!article" three-line>
+    <template v-for="(post, index) in posts">
+      <v-list-tile :key="index" ripple avatar :to="subject + '/' + post.to">
         <v-list-tile-avatar>
-          <img :src="article.avatar" />
+          <img :src="post.avatar" />
         </v-list-tile-avatar>
         <v-list-tile-content>
-          <v-list-tile-title v-html="article.title"></v-list-tile-title>
-          <v-list-tile-sub-title
-            v-html="article.subtitle"
-          ></v-list-tile-sub-title>
+          <v-list-tile-title v-html="post.title"></v-list-tile-title>
+          <v-list-tile-sub-title v-html="post.subtitle"></v-list-tile-sub-title>
         </v-list-tile-content>
       </v-list-tile>
       <v-divider
-        v-if="index + 1 < articles.length"
+        v-if="index + 1 < posts.length"
         :key="`divider-${index}`"
       ></v-divider>
     </template>
   </v-list>
+  <NuxtChild v-else></NuxtChild>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      articles: [
+      posts: [
         {
           to: '2019-04-10-New-start',
           title: '블로그를 새로 개장하는 중입니다.',
@@ -71,7 +70,10 @@ export default {
     };
   },
   computed: {
-    articleData() {
+    subject() {
+      return this.$route.params.subject;
+    },
+    article() {
       return this.$route.params.article;
     }
   },

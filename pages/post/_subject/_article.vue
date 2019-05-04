@@ -5,11 +5,9 @@
 <script>
 export default {
   computed: {
-    subject() {
-      return this.$route.params.subject;
-    },
     markdown() {
-      console.log('Test');
+      console.log('article:', this.$route.params.article);
+      console.log('article:', this.$route.params.subject);
       return require('~/static/post/logbook/2019-04-10-New-start.md');
     }
   }
