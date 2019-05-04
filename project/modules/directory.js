@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 
-const postSet = {};
+const subjects = {};
 const siteMap = [];
 const targetPath = '../../static/';
 const postDirectory = path.join(__dirname, targetPath);
@@ -17,17 +17,28 @@ const postDirectory = path.join(__dirname, targetPath);
     } else {
       const postPath = fileAddress.replace('.md', '');
       const path = postPath.replace(postDirectory + '/', '');
-      const title = postPath.replace(directory + '/', '');
       const siteRoute = postPath.replace(postDirectory, '');
+      const to = postPath.replace(directory + '/', '');
+      let title;
+      let date;
+      const postProof = to.indexOf('=@=');
       siteMap.push(siteRoute);
-      postList.push({ title, path });
+
+      if (postProof > 0) {
+        date = to.substring(0, postProof);
+        title = to.substring(postProof + 3);
+      }
+
+      postList.push({ title, date, path, to });
     }
   });
   if (postList.length === 0) {
     return;
   }
-  postList.sort((a, b) => parseInt(a.title.replace(fileKey + '/', '')) - parseInt(b.title.replace(fileKey + '/', '')));
-  postSet[fileKey] = postList;
+  postList.sort(
+    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+  );
+  subjects[fileKey] = postList;
 })(postDirectory);
-console.log(postSet, siteMap);
-module.exports = { postSet, siteMap };
+
+module.exports = { subjects, siteMap };

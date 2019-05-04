@@ -23,6 +23,6 @@ module.exports = {
     'no-console': 'off'
   },
   globals: {
-    postSet: true
+    subjects: true
   }
 };

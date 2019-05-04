@@ -1,8 +1,8 @@
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
 const webpack = require('webpack');
 const pkg = require('./package');
-const { postSet } = require('./project/modules/directory');
-
+const { subjects } = require('./project/modules/directory');
+console.log(subjects);
 module.exports = {
   mode: 'universal',
 
@@ -64,7 +64,7 @@ module.exports = {
     plugins: [
       new VuetifyLoaderPlugin(),
       new webpack.DefinePlugin({
-        postSet: postSet
+        subjects: JSON.stringify(subjects)
       })
     ],
     loaders: {
