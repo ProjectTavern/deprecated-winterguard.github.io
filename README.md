@@ -1,6 +1,6 @@
 # Bonfire
 
-> Wintergaurd's Lodge
+> Winterguard's blog
 
 ## Build Setup
 
