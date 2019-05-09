@@ -1,4 +1,4 @@
-# Bonfire
+<h1 align="center">Bonfire</h1>
 
 > Winterguard's blog
 
