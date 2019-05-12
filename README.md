@@ -1,6 +1,7 @@
 <h1 align="center">Bonfire</h1>
 
-> Winterguard's blog
+> Winterguard's blog  
+> http://winterguard.github.io 
 
 ## Build Setup
 
