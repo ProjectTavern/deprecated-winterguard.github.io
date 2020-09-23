@@ -1,5 +1,7 @@
 import IndexCardList from './IndexCardList';
+import MainTitle from './MainTitle';
 
 export {
-  IndexCardList
+  MainTitle,
+  IndexCardList,
 }

@@ -1,9 +1,13 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { IndexCardList } from '../components/organizations'
+import { MainTitle, IndexCardList } from '../components/organizations'
 
 export default function Home() {
-
+  const mainTitle = {
+    title: '윈터가드',
+    description: '학습기술을 적는 블로그입니다.',
+    href: 'https://winterguard.github.io/'
+  };
   const indexCards = [
     {
       title: '자바스크립트',
@@ -34,12 +38,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          학습기술 블로그
-        </h1>
-        <p className={styles.description}>
-          학습기술을 적는 블로그입니다.
-        </p>
+        <MainTitle {...mainTitle}/>
         <IndexCardList indexCards={indexCards} />
       </main>
 
