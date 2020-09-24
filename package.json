@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "build:static": "next build && next export",
-    "deploy:gh-pages": "npm run build:static && push-dir --dir=out --branch=gh-pages --cleanup",
+    "deploy:gh-pages": "touch out/.nojekyll && push-dir --dir=out --branch=gh-pages --cleanup",
+    "publish:gh-pages": "npm run build:static && npm run deploy:gh-pages",
     "start": "next start"
   },
   "dependencies": {
