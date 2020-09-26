@@ -1,6 +1,7 @@
   
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import '../styles/globals.css'
+import { RemoteMenu } from '../components/organizations'
 
 const theme = {
   colors: {
@@ -10,7 +11,10 @@ const theme = {
 
 function MyApp({ Component, pageProps }) {
   return (<ThemeProvider theme={theme}>
-      <Component {...pageProps} />
+      <>
+        <RemoteMenu/>
+        <Component {...pageProps} />
+      </>
     </ThemeProvider>)
 }
 

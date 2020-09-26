@@ -4,7 +4,7 @@ import { MainTitle, IndexCardList } from '../components/organizations'
 
 export default function Home() {
   const mainTitle = {
-    title: '윈터가드',
+    title: 'WinterLog',
     description: '학습기술을 적는 블로그입니다.',
     href: 'https://winterguard.github.io/'
   };
@@ -13,7 +13,7 @@ export default function Home() {
       key: 'index-javascript',
       title: '자바스크립트',
       description: '프론트엔드 기술로 자바스크립트를 사용하고 있습니다.',
-      href: 'https://google.com'
+      href: '/study/javascript'
     },
     {
       key: 'index-algorithm',
