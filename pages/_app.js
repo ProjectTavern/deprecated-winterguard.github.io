@@ -2,6 +2,7 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import '../styles/globals.css'
 import { RemoteMenu } from '../components/organizations'
+import { indexCards } from '../store/dummydata';
 
 const theme = {
   colors: {
@@ -12,7 +13,7 @@ const theme = {
 function MyApp({ Component, pageProps }) {
   return (<ThemeProvider theme={theme}>
       <>
-        <RemoteMenu/>
+        <RemoteMenu indexCards={indexCards} />
         <Component {...pageProps} />
       </>
     </ThemeProvider>)
