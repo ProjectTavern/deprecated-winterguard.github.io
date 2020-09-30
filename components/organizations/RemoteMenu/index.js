@@ -1,24 +1,23 @@
 import { useState } from 'react'
 
 import Link from 'next/link'
-import { StyledRemoteMenuContainer, StyledRemoteMenuButton, StyledRemoteMenuList } from './private.RemoteMenu.styled'
+import { StyledRemoteMenuContainer, StyledRemoteMenuButton, StyledRemoteMenuList, StyledRemoteMenuListItem } from './private.RemoteMenu.styled'
 
 const RemoteMenu = ({ indexCards }) =>{
   const [openMenuList, setOpenMenuList] = useState(true);
 
-  const RemoteMenuList = () => (openMenuList &&
-    (<StyledRemoteMenuList>
-      <li>
+  const RemoteMenuList = () => (<StyledRemoteMenuList>
+      <StyledRemoteMenuListItem>
         <Link href="/">Home</Link>
-      </li>
+      </StyledRemoteMenuListItem>
       {indexCards.map(({ key, title, href }) =>
-        (<li key={key}>
+        (<StyledRemoteMenuListItem key={key}>
           <Link href={href}>{ title }</Link>
-        </li>))}
-    </StyledRemoteMenuList>))
+        </StyledRemoteMenuListItem>))}
+    </StyledRemoteMenuList>)
 
   return (
-    <StyledRemoteMenuContainer>
+    <StyledRemoteMenuContainer className={openMenuList ? 'remote-menu--open' : 'remote-menu--close'}>
     <StyledRemoteMenuButton onClick={() => setOpenMenuList(!openMenuList)}>버튼</StyledRemoteMenuButton>
     <RemoteMenuList />
   </StyledRemoteMenuContainer>)
