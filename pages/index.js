@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { MainTitle, IndexCardList } from '../components/organizations'
+import { MainTitle, IndexCardList } from '@/components/organizations'
 import { mainTitle, indexCards } from '../store/dummydata';
 
 export default function Home() {
