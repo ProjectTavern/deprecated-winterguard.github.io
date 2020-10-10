@@ -1,28 +1,36 @@
-import styled from 'styled-components'
+import Link from "next/link";
+import styled from "styled-components";
+
+const StyledRemoteMenuLink = styled(Link)`
+  display: block;
+  height: 100%;
+`;
 
 const StyledRemoteMenuContainer = styled.div`
-  position: sticky;
+  position: fixed;
   top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(0, 0, 0, .03);
-  transition: width ease-out 0.5s;
+  transition: width ease-out 0.25s;
   overflow: hidden;
   &.remote-menu--open {
-    width: 80px;
+    width: 32px;
+    height: 32px;
   }
   &.remote-menu--close {
     width: 100%;
   }
-`
+`;
 
 const StyledRemoteMenuButton = styled.div`
-  max-width: 80px;
-  min-width: 80px;
-  width: 80px;
-  height: 80px;
-`
+  max-width: 32px;
+  min-width: 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  border: 1px solid #000;
+`;
 
 const StyledRemoteMenuList = styled.ul`
   flex-grow: 1;
@@ -30,7 +38,7 @@ const StyledRemoteMenuList = styled.ul`
   align-items: center;
   justify-content: space-around;
   height: 80px;
-`
+`;
 
 const StyledRemoteMenuListItem = styled.li`
   display: flex;
@@ -42,11 +50,12 @@ const StyledRemoteMenuListItem = styled.li`
   &:hover {
     background: rgba(125, 234, 57, 0.3);
   }
-`
+`;
 
 export {
   StyledRemoteMenuContainer,
   StyledRemoteMenuButton,
   StyledRemoteMenuList,
-  StyledRemoteMenuListItem
-}
+  StyledRemoteMenuListItem,
+  StyledRemoteMenuLink,
+};

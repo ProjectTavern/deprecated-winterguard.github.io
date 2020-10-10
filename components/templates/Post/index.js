@@ -3,7 +3,7 @@ import { StyledPost } from './private.Post.styled'
 const Post = ({ category ,children }) => {
   return (
     <StyledPost>
-      <h3>{category}</h3>
+      <h2>{category}</h2>
       {children}
     </StyledPost>)
 }

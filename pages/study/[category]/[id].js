@@ -8,7 +8,7 @@ const StudyPost = () => {
 
   return (
     <Post category={category} id={id}>
-      <p>{category}: {id}</p>
+      <h3></h3>
     </Post>
   )
 }
