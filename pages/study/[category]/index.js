@@ -1,10 +1,12 @@
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 
-const PostList = () => {
-  const router = useRouter()
-  const { category } = router.query
+import { PostList } from "@/components/templates";
 
-  return <p>{category}</p>
-}
+const PostListPage = () => {
+  const router = useRouter();
+  const { category } = router.query;
 
-export default PostList;
+  return <PostList category={category} />;
+};
+
+export default PostListPage;

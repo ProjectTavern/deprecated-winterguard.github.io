@@ -1,11 +1,12 @@
-import { StyledPost } from './private.Post.styled'
+import { StyledPost } from "./private.Post.styled";
 
-const Post = ({ category ,children }) => {
+const Post = ({ category, children }) => {
   return (
     <StyledPost>
       <h2>{category}</h2>
       {children}
-    </StyledPost>)
-}
+    </StyledPost>
+  );
+};
 
-export default Post
+export default Post;
