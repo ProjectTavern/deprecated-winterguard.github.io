@@ -13,11 +13,12 @@ export const getPosts = async () => {
     const mattered = matter(content.default);
 
     const categories = post.split('/')
-    categories.pop();
+    const title = categories.pop().replace(/\..+$/, '');
 
     posts.push({
-      ...mattered,
+      title,
       slug: post.replace('.md', ''),
+      ...mattered,
       categories
     });
   }

@@ -5,7 +5,7 @@ import { mainTitle, indexCards } from '../store/dummydata';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Winterguard's Log</title>
         <link rel="icon" href="/favicon.ico" />
@@ -25,6 +25,6 @@ export default function Home() {
           Powered by{' '}Winterguard
         </a>
       </footer>
-    </div>
+    </>
   )
 }
