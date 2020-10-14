@@ -7,7 +7,7 @@ import Icon, { Github } from '@/components/icons';
 
 export default function Home() {
   return (
-    <>
+    <React.Fragment>
       <Head>
         <title>Winterguard's Log</title>
         <link rel="icon" href="/favicon.ico" />
@@ -29,6 +29,6 @@ export default function Home() {
           </Icon>
         </a>
       </footer>
-    </>
+    </React.Fragment>
   )
 }
