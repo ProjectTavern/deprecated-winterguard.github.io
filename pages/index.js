@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <MainTitle {...mainTitle}/>
+        <MainTitle {...mainTitle} />
         <IndexCardList indexCards={indexCards} />
       </main>
 

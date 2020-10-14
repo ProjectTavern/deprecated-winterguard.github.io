@@ -1,20 +1,24 @@
 import matter from 'gray-matter'
 import marked from 'marked'
 
-const contentsFolder = '../contents';
+
 
 export const getPosts = async () => {
-  const context = require.context(contentsFolder, false, /\.md$/);
+  const context = require.context('../contents', true, /\.(md|html)$/);
   const posts = [];
 
   for (const key of context.keys()) {
     const post = key.slice(2);
-    const content = await import(`${contentsFolder}/${post}`);
+    const content = await import(`../contents/${post}`);
     const mattered = matter(content.default);
+
+    const categories = post.split('/')
+    categories.pop();
 
     posts.push({
       ...mattered,
-      slug: post.replace('.md', '')
+      slug: post.replace('.md', ''),
+      categories
     });
   }
 
@@ -22,7 +26,7 @@ export const getPosts = async () => {
 }
 
 export const getPost = async (slug) => {
-  const fileContent = await import(`${contentsFolder}/${slug}.md`);
+  const fileContent = await import(`../contents/${slug}.md`);
   const mattered = matter(fileContent.default);
   const content = marked(meta.content);
 

@@ -19,7 +19,12 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["components/*"]
+      "@/components/*": [
+        "components/*"
+      ],
+      "@/preAPI/*": [
+        "preAPI/*"
+      ]
     }
   },
   "include": [
