@@ -3,6 +3,8 @@ import styles from '../styles/Home.module.css'
 import { MainTitle, IndexCardList } from '@/components/organizations'
 import { mainTitle, indexCards } from '../store/dummydata';
 
+import Icon, { Github } from '@/components/icons';
+
 export default function Home() {
   return (
     <>
@@ -22,7 +24,9 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}Winterguard
+          <Icon>
+            <Github />
+          </Icon>
         </a>
       </footer>
     </>
