@@ -15,7 +15,7 @@ export const getPosts = async () => {
     const slug = postURI.replace('.md', '');
     const categories = postURI.split('/')
     const filename = categories.pop();
-    const [writtenAt] = filename.match(/^(\d+)-(\d+)-(\d+)-/);
+    const writtenAt = filename.match(/^(\d+)-(\d+)-(\d+)-/)[0].slice(0, -1);
     const title = filename.replace(/^(\d+)-(\d+)-(\d+)-/, '').replace(/\..+$/, '');
     const content = marked(mattered.content);
 

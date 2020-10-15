@@ -1,9 +1,14 @@
-import { StyledPostItem } from "./private.PostItem.styled";
+import {
+  StyledPostItem, StyledPostTitle, StyledPostDate
+} from "./private.PostItem.styled";
 
 const PostItem = ({ children, post }) => {
   return (
     <StyledPostItem>
-      {children}
+      <StyledPostTitle>{children}</StyledPostTitle>
+      <StyledPostDate>
+        {post.writtenAt}
+      </StyledPostDate>
     </StyledPostItem>
   );
 };

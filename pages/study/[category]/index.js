@@ -1,13 +1,11 @@
 import { useRouter } from "next/router";
 
 import { PostList } from "@/components/templates";
-
 import { getPosts } from '@/preAPI/posts'
 
 const PostListPage = ({ posts }) => {
   const router = useRouter();
   const { category } = router.query;
-  console.log(posts);
 
   return (
     <React.Fragment>
@@ -17,9 +15,17 @@ const PostListPage = ({ posts }) => {
   );
 };
 
-export default PostListPage;
+const getStaticPaths = async () => {
+  const allPosts = await getPosts();
+  const paths = allPosts.map(({ categories }) => `/study/${categories[0]}`) || [];
 
-export const getStaticProps = async ({ params, preview = false, previewData }) => {
+  return {
+    paths,
+    fallback: true,
+  }
+}
+
+const getStaticProps = async ({ params, preview = false, previewData }) => {
   const posts = await getPosts();
   posts.forEach(post => delete post.orig);
 
@@ -30,12 +36,8 @@ export const getStaticProps = async ({ params, preview = false, previewData }) =
   }
 }
 
-export async function getStaticPaths() {
-  const allPosts = await getPosts();
-  const paths = allPosts.map(({ categories }) => `/study/${categories[0]}`) || [];
-
-  return {
-    paths,
-    fallback: true,
-  }
+export default PostListPage;
+export {
+  getStaticPaths,
+  getStaticProps
 }

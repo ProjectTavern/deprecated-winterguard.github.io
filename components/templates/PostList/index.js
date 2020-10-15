@@ -10,7 +10,9 @@ const Post = ({ posts = [] }) => {
       {posts.map(
         post =>
           (
-            <PostItem post={post}>{post.title}</PostItem>
+            <PostItem key={post.content} post={post}>
+              {post.title}
+            </PostItem>
           )
       )}
     </StyledPostList>
