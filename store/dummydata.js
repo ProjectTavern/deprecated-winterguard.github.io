@@ -6,16 +6,10 @@ export const mainTitle = {
 
 export const indexCards = [
   {
-    key: 'index-javascript',
-    title: '자바스크립트',
+    key: 'index-journal',
+    title: '개발학습일지',
     description: '프론트엔드 기술로 자바스크립트를 사용하고 있습니다.',
-    href: '/study/javascript'
-  },
-  {
-    key: 'index-algorithm',
-    title: '알고리즘',
-    description: '기능 구현을 위한 알고리즘을 학습하고 있습니다.',
-    href: '/study/algorithm'
+    href: '/study/journal'
   },
   {
     key: 'index-portfolio',
