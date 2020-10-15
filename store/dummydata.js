@@ -1,7 +1,7 @@
 export const mainTitle = {
   title: 'WinterLog',
   description: '학습기술을 적는 블로그입니다.',
-  href: 'https://winterguard.github.io/'
+  href: '/'
 };
 
 export const indexCards = [
