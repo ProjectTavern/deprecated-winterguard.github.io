@@ -19,9 +19,10 @@ const getStaticPaths = async () => {
   const allPosts = await getPosts();
   const paths = allPosts.map(({ categories }) => `/study/${categories[0]}`) || [];
 
+  paths.push('/study/javascript')
   return {
     paths,
-    fallback: true,
+    fallback: false,
   }
 }
 
