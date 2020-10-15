@@ -1,19 +1,19 @@
 import {
-  StyledPostListContainer,
   StyledPostList,
 } from "./private.PostList.styled";
 
 import { PostItem } from "@/components/organizations";
 
-const Post = ({ category }) => {
+const Post = ({ posts = [] }) => {
   return (
-    <StyledPostListContainer>
-      <h2>{category}</h2>
-      <StyledPostList>
-        <PostItem>1</PostItem>
-        <PostItem>2</PostItem>
-      </StyledPostList>
-    </StyledPostListContainer>
+    <StyledPostList>
+      {posts.map(
+        post =>
+          (
+            <PostItem post={post}>{post.title}</PostItem>
+          )
+      )}
+    </StyledPostList>
   );
 };
 

@@ -1,15 +1,13 @@
 import styled from "styled-components";
 
-const StyledPostListContainer = styled.div`
-  font-size: 2rem;
-  padding: 40px 16px;
-  h2 {
-    text-align: center;
-    padding: 24px 0;
-    font-size: 1.5em;
-  }
-`;
+const StyledPostListContainer = styled.div``;
 
-const StyledPostList = styled.ul``;
+const StyledPostList = styled.ul`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  font-size: 1rem;
+  padding: 40px 0;
+`;
 
 export { StyledPostListContainer, StyledPostList };

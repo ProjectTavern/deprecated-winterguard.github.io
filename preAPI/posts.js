@@ -8,18 +8,24 @@ export const getPosts = async () => {
   const posts = [];
 
   for (const key of context.keys()) {
-    const post = key.slice(2);
-    const content = await import(`../contents/${post}`);
-    const mattered = matter(content.default);
+    const postURI = key.slice(2);
+    const post = await import(`../contents/${postURI}`);
+    const mattered = matter(post.default);
 
-    const categories = post.split('/')
-    const title = categories.pop().replace(/\..+$/, '');
+    const slug = postURI.replace('.md', '');
+    const categories = postURI.split('/')
+    const filename = categories.pop();
+    const [writtenAt] = filename.match(/^(\d+)-(\d+)-(\d+)-/);
+    const title = filename.replace(/^(\d+)-(\d+)-(\d+)-/, '').replace(/\..+$/, '');
+    const content = marked(mattered.content);
 
     posts.push({
       title,
-      slug: post.replace('.md', ''),
+      slug,
+      writtenAt,
+      categories,
       ...mattered,
-      categories
+      content
     });
   }
 
@@ -29,7 +35,7 @@ export const getPosts = async () => {
 export const getPost = async (slug) => {
   const fileContent = await import(`../contents/${slug}.md`);
   const mattered = matter(fileContent.default);
-  const content = marked(meta.content);
+  const content = marked(mattered.content);
 
   return {
     ...mattered,

@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <React.Fragment>
       <Head>
-        <title>Winterguard's Log</title>
+        <title>WinterLog</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
