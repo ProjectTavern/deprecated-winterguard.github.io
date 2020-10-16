@@ -19,7 +19,7 @@ const getStaticPaths = async () => {
   const allPosts = await getPosts({
     categoryURI: 'journal'
   });
-  const paths = allPosts.map(({ categories }) => `/${categories[0]}`) || [];
+  const paths = [];
 
   return {
     paths,
