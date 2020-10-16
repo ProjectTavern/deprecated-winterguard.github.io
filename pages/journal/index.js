@@ -9,17 +9,18 @@ const PostListPage = ({ posts }) => {
 
   return (
     <React.Fragment>
-      <h2>{category}</h2>
+      <h2>Journal</h2>
       <PostList category={category} posts={posts} />
     </React.Fragment>
   );
 };
 
 const getStaticPaths = async () => {
-  const allPosts = await getPosts();
-  const paths = allPosts.map(({ categories }) => `/study/${categories[0]}`) || [];
+  const allPosts = await getPosts({
+    categoryURI: 'journal'
+  });
+  const paths = allPosts.map(({ categories }) => `/${categories[0]}`) || [];
 
-  paths.push('/study/javascript')
   return {
     paths,
     fallback: false,
@@ -27,7 +28,9 @@ const getStaticPaths = async () => {
 }
 
 const getStaticProps = async ({ params, preview = false, previewData }) => {
-  const posts = await getPosts();
+  const posts = await getPosts({
+    categoryURI: 'journal'
+  });
   posts.forEach(post => delete post.orig);
 
   return {

@@ -49,7 +49,7 @@ const RemoteMenuMoveButton = (props) => {
     moveTargetElement.current.style.top = `${willBeTargetPosition.y}px`
   }, [])
 
-  const handleMouseDown = (event) => {
+  const handleMouseDown = useCallback((event) => {
     event.preventDefault();
 
     if (!moveTargetElement.current) {
@@ -70,16 +70,16 @@ const RemoteMenuMoveButton = (props) => {
     hold.current = true;
 
     document.addEventListener('mousemove', handleMouseMove);
-  }
+  }, []);
 
 
 
-  const handleRemoveController = (event) => {
+  const handleRemoveController = useCallback((event) => {
     event.preventDefault();
 
     hold.current = false;
     document.removeEventListener('mousemove', handleMouseMove);
-  }
+  }, []);
 
   return (
     <StyledRemoteMenuControlButton
@@ -103,7 +103,7 @@ const RemoteMenuFoldButton = (props) => {
 
 const RemoteMenu = ({ indexCards }) => {
   const [openMenuList, setOpenMenuList] = useState(false);
-  const [openRemoteMenu, setOpenRemoteMenu] = useState(true);
+  const [openRemoteMenu, setOpenRemoteMenu] = useState(false);
   const containerElement = useRef(null);
 
   const toggleMenuList = () => {

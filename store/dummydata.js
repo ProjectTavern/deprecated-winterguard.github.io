@@ -1,6 +1,6 @@
 export const mainTitle = {
   title: 'WinterLog',
-  description: '학습기술을 적는 블로그입니다.',
+  description: '',
   href: '/'
 };
 
@@ -8,8 +8,14 @@ export const indexCards = [
   {
     key: 'index-journal',
     title: '개발학습일지',
-    description: '프론트엔드 기술로 자바스크립트를 사용하고 있습니다.',
-    href: '/study/journal'
+    description: '',
+    href: '/journal'
+  },
+  {
+    key: 'index-study',
+    title: 'Wiki',
+    description: '',
+    href: '/wiki'
   },
   {
     key: 'index-portfolio',

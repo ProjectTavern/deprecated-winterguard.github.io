@@ -1,7 +1,7 @@
 const Study = () => {
   return (
     <div>
-      <h2>Study</h2>
+      <h2>Wiki</h2>
     </div>
   )
 }

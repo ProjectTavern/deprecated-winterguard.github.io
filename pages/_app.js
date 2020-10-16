@@ -4,6 +4,7 @@ import '../styles/globals.css'
 
 import { RemoteMenu } from '@/components/organizations'
 import Main from '@/layouts/Main'
+import Footer from '@/layouts/Footer'
 
 import { indexCards } from '../store/dummydata';
 const theme = {
@@ -19,6 +20,7 @@ function MyApp({ Component, pageProps }) {
       <Main>
         <Component {...pageProps} />
       </Main>
+      <Footer />
     </ThemeProvider>
   )
 }

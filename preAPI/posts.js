@@ -1,14 +1,18 @@
 import matter from 'gray-matter'
 import marked from 'marked'
 
-
-
-export const getPosts = async () => {
-  const context = require.context('../contents', true, /\.(md|html)$/);
+export const getPosts = async (payload = {}) => {
+  const { categoryURI = '' } = payload;
+  const context = require.context(`../contents`, true, /\.(md|html)$/);
   const posts = [];
 
   for (const key of context.keys()) {
     const postURI = key.slice(2);
+
+    if (categoryURI && !postURI.includes(categoryURI)) {
+      continue;
+    }
+
     const post = await import(`../contents/${postURI}`);
     const mattered = matter(post.default);
 
