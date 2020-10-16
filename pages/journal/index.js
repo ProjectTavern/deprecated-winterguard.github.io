@@ -42,6 +42,6 @@ const getStaticProps = async ({ params, preview = false, previewData }) => {
 
 export default PostListPage;
 export {
-  getStaticPaths,
+  // getStaticPaths,
   getStaticProps
 }
