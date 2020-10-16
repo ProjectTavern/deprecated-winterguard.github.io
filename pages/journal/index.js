@@ -15,17 +15,17 @@ const PostListPage = ({ posts }) => {
   );
 };
 
-const getStaticPaths = async () => {
-  const allPosts = await getPosts({
-    categoryURI: 'journal'
-  });
-  const paths = allPosts.map(({ categories }) => `/${categories[0]}`) || [];
+// const getStaticPaths = async () => {
+//   const allPosts = await getPosts({
+//     categoryURI: 'journal'
+//   });
+//   const paths = allPosts.map(({ categories }) => `/${categories[0]}`) || [];
 
-  return {
-    paths,
-    fallback: false,
-  }
-}
+//   return {
+//     paths,
+//     fallback: false,
+//   }
+// }
 
 const getStaticProps = async ({ params, preview = false, previewData }) => {
   const posts = await getPosts({
