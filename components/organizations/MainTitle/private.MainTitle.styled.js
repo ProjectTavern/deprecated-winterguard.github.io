@@ -1,21 +1,22 @@
 import styled from 'styled-components'
 
 const StyledMainTitle = styled.div`
-  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 50px);
+  min-width: calc(100vw - 3rem);
+  height: 30vw;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 2.5rem;
   text-align: center;
+  border: 1px solid #020202;
 `;
 
 const StyledMainTitleLink = styled.a`
+  display: block;
   color: #0070f3;
   text-decoration: none;
-
-  &:hover,
-  &:focus,
-  &:active {
-    text-decoration: underline;
-  }
 `;
 
 const StyledMainTitleDescription = styled.p`
