@@ -15,18 +15,6 @@ const PostListPage = ({ posts }) => {
   );
 };
 
-const getStaticPaths = async () => {
-  const allPosts = await getPosts({
-    categoryURI: 'journal'
-  });
-  const paths = [];
-
-  return {
-    paths,
-    fallback: false,
-  }
-}
-
 const getStaticProps = async ({ params, preview = false, previewData }) => {
   const posts = await getPosts({
     categoryURI: 'journal'
@@ -42,6 +30,5 @@ const getStaticProps = async ({ params, preview = false, previewData }) => {
 
 export default PostListPage;
 export {
-  getStaticPaths,
   getStaticProps
 }
