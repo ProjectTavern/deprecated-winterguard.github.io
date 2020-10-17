@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import {
   StyledPostItem, StyledPostTitle, StyledPostDate
 } from "./private.PostItem.styled";
@@ -5,7 +7,9 @@ import {
 const PostItem = ({ children, post }) => {
   return (
     <StyledPostItem>
-      <StyledPostTitle>{children}</StyledPostTitle>
+      <Link href={post.postURI}>
+        <StyledPostTitle>{children}</StyledPostTitle>
+      </Link>
       <StyledPostDate>
         {post.writtenAt}
       </StyledPostDate>

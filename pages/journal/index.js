@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { PostList } from "@/components/templates";
 import { getPosts } from '@/preAPI/posts'
 
-const PostListPage = ({ posts }) => {
+const Journal = ({ posts }) => {
   const router = useRouter();
   const { category } = router.query;
 
@@ -28,7 +28,7 @@ const getStaticProps = async ({ params, preview = false, previewData }) => {
   }
 }
 
-export default PostListPage;
+export default Journal;
 export {
   getStaticProps
 }

@@ -28,6 +28,7 @@ export const getPosts = async (payload = {}) => {
       slug,
       writtenAt,
       categories,
+      postURI,
       ...mattered,
       content
     });
