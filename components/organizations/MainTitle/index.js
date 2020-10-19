@@ -5,7 +5,6 @@ const MainTitle = ({ title, description, href }) => (
     <StyledMainTitle>
       <StyledMainTitleLink href={href}>{title}</StyledMainTitleLink>
     </StyledMainTitle>
-    <StyledMainTitleDescription>{description}</StyledMainTitleDescription>
   </React.Fragment>
 )
 

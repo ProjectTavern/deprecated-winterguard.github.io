@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { PostList } from "@/components/templates";
 import { getPosts } from '@/preAPI/posts'
 
-const PostListPage = ({ posts }) => {
+const Journal = ({ posts }) => {
   const router = useRouter();
   const { category } = router.query;
 
@@ -14,18 +14,6 @@ const PostListPage = ({ posts }) => {
     </React.Fragment>
   );
 };
-
-// const getStaticPaths = async () => {
-//   const allPosts = await getPosts({
-//     categoryURI: 'journal'
-//   });
-//   const paths = allPosts.map(({ categories }) => `/${categories[0]}`) || [];
-
-//   return {
-//     paths,
-//     fallback: false,
-//   }
-// }
 
 const getStaticProps = async ({ params, preview = false, previewData }) => {
   const posts = await getPosts({
@@ -40,8 +28,7 @@ const getStaticProps = async ({ params, preview = false, previewData }) => {
   }
 }
 
-export default PostListPage;
+export default Journal;
 export {
-  // getStaticPaths,
   getStaticProps
 }
