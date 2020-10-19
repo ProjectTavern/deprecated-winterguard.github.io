@@ -19,7 +19,7 @@ const getStaticPaths = async () => {
   const allPosts = await getPosts(pageConfig);
   const paths = allPosts.map(
     ({ filename }) => ({
-      params: { postName: encodeURI(filename) }
+      params: { postName: encodeURI(filename).replace('.md', '') }
     })
   );
 

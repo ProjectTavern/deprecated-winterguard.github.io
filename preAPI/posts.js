@@ -39,7 +39,7 @@ export const getPosts = async (payload = {}) => {
 }
 
 export const getPost = async ({ postName, categoryURI }) => {
-  const fileContent = await import(`../contents/${categoryURI}/${postName}`);
+  const fileContent = await import(`../contents/${categoryURI}/${postName}.md`);
   const mattered = matter(fileContent.default);
   const content = marked(mattered.content);
 
