@@ -8,10 +8,10 @@ const JournalPost = ({ posts }) => {
   const { postName } = router.query;
   const [post] = posts.filter(post => postName.includes(post.title));
 
-  return (
+  return (process.browser &&
     <React.Fragment>
       <h3>{postName}</h3>
-      <p dangerouslySetInnerHTML={{__html: post.content}}></p>
+      <p dangerouslySetInnerHTML={{ __html: post.content }}></p>
     </React.Fragment>
   );
 };
@@ -20,8 +20,8 @@ const getStaticPaths = async () => {
   const allPosts = await getPosts({
     categoryURI: 'journal'
   });
-  const paths = allPosts.map(({ postURI }) => `/${encodeURI(postURI)}`) || [];
-  
+  const paths = allPosts.map(({ postURI }) => `/${encodeURI(postURI).replace('.md', '')}`) || [];
+
   return {
     paths,
     fallback: false,
