@@ -20,7 +20,11 @@ const getStaticPaths = async () => {
   const allPosts = await getPosts({
     categoryURI: 'journal'
   });
-  const paths = allPosts.map(({ postURI }) => `/${encodeURI(postURI).replace('.md', '')}`) || [];
+  const paths = allPosts.map(
+    ({ filename }) => ({
+      params: { postName: encodeURI(filename) }
+    })
+  );
 
   return {
     paths,

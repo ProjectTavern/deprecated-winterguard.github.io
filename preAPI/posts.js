@@ -25,6 +25,7 @@ export const getPosts = async (payload = {}) => {
 
     posts.push({
       title,
+      filename,
       slug,
       writtenAt,
       categories,
