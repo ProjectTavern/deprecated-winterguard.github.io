@@ -1,25 +1,22 @@
-import { useRouter } from "next/router";
-
-import { getPosts } from '@/preAPI/posts'
+import { getPosts, getPost } from '@/preAPI/posts'
 import { Post } from "@/components/templates";
 
-const JournalPost = ({ posts }) => {
-  const router = useRouter();
-  const { postName } = router.query;
-  const [post] = posts.filter(post => postName.includes(post.title));
+const pageConfig = {
+  categoryURI: 'journal'
+}
+
+const JournalPost = ({ post }) => {
 
   return (process.browser &&
     <React.Fragment>
-      <h3>{postName}</h3>
+      <h3>{post.title}</h3>
       <p dangerouslySetInnerHTML={{ __html: post.content }}></p>
     </React.Fragment>
   );
 };
 
 const getStaticPaths = async () => {
-  const allPosts = await getPosts({
-    categoryURI: 'journal'
-  });
+  const allPosts = await getPosts(pageConfig);
   const paths = allPosts.map(
     ({ filename }) => ({
       params: { postName: encodeURI(filename) }
@@ -33,14 +30,13 @@ const getStaticPaths = async () => {
 }
 
 const getStaticProps = async ({ params, preview = false, previewData }) => {
-  const posts = await getPosts({
-    categoryURI: 'journal'
-  });
-  posts.forEach(post => delete post.orig);
+  const { postName } = params;
+  const payload = Object.assign({ postName }, pageConfig)
+  const post = await getPost(payload);
 
   return {
     props: {
-      posts
+      post
     }
   }
 }

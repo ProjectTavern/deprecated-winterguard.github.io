@@ -38,10 +38,12 @@ export const getPosts = async (payload = {}) => {
   return posts;
 }
 
-export const getPost = async (slug) => {
-  const fileContent = await import(`../contents/${slug}.md`);
+export const getPost = async ({ postName, categoryURI }) => {
+  const fileContent = await import(`../contents/${categoryURI}/${postName}`);
   const mattered = matter(fileContent.default);
   const content = marked(mattered.content);
+
+  delete mattered.orig;
 
   return {
     ...mattered,

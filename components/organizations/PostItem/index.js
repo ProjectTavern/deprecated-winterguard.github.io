@@ -7,7 +7,7 @@ import {
 const PostItem = ({ children, post }) => {
   return (
     <StyledPostItem>
-      <Link href={post.slug}>
+      <Link href={post.slug + '.md'}>
         <StyledPostTitle>{children}</StyledPostTitle>
       </Link>
       <StyledPostDate>
