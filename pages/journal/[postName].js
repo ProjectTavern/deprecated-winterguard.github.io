@@ -17,7 +17,8 @@ const JournalPost = ({ post }) => {
 
 /**
  * 배포 환경에 따라 path 문자열을 인코딩할지를 결정하는 함수
- * 개발환경: 인코딩을 안했을 경우 제대로 인식하지 않음
+ * 개발 환경: path 경로 인코딩 - 인코딩을 안했을 경우 제대로 인식하지 않음
+ * 깃허브페이지 환경: path 경로 인코딩 하지 않음 - path를 인코딩 했을 경우 깃허브 주소에서 호출할 수 없음
  * @param {String} target 
  */
 const parseStaticPathByEnvironment = (target) => {
