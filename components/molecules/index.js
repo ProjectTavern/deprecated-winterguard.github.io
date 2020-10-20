@@ -1,5 +1,1 @@
-import IndexCard from './IndexCard';
-
-export {
-  IndexCard
-}
+export { default as IndexCard } from './IndexCard';
