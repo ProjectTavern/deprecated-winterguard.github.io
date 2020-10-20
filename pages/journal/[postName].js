@@ -9,7 +9,7 @@ const pageConfig = {
 const JournalPost = ({ post }) => {
   return (
     <React.Fragment>
-      <h1>{Journal}</h1>
+      <h1>Journal</h1>
       <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
     </React.Fragment>
   );
