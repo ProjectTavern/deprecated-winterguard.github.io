@@ -1,3 +1,7 @@
+---
+title: "[VueJS] deep selector"
+---
+
 # [VueJS] deep
 
 Vue-Loader 에서는 deep selector 라는 강력한 기능을 제공하고 있다.
