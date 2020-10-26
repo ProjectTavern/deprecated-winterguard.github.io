@@ -1,6 +1,5 @@
 import { getPosts, getPost } from '@/preAPI/posts'
 import { Post } from "@/components/templates";
-import { encode } from 'punycode';
 
 const pageConfig = {
   categoryURI: 'journal'
@@ -10,7 +9,7 @@ const JournalPost = ({ post }) => {
   return (
     <React.Fragment>
       <h1>Journal</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
+      <Post post={post} />
     </React.Fragment>
   );
 };
