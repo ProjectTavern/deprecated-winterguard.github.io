@@ -12,12 +12,6 @@ export const indexCards = [
     href: '/journal'
   },
   {
-    key: 'index-study',
-    title: 'Wiki',
-    description: '',
-    href: '/wiki'
-  },
-  {
     key: 'index-portfolio',
     title: '포트폴리오',
     description: '이제까지 진행해온 프로젝트입니다.',
