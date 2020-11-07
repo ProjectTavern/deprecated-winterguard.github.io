@@ -7,9 +7,12 @@
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
+ "dev": "next dev",
+ "build": "next build",
+ "build:static": "next build && next export",
+ "deploy:gh-pages": "touch out/.nojekyll && push-dir --dir=out --branch=gh-pages --cleanup",
+ "publish:gh-pages": "npm run build:static && npm run deploy:gh-pages",
+ "start": "next start"
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
