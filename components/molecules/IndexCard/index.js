@@ -1,9 +1,17 @@
-import { StyledIndexCard, StyledIndexCardTitle, StyledIndexCardDescription } from './private.IndexCard.styled';
+import Link from "next/link";
 
- const IndexCard = ({ title, description, href, target }) => (
-    <StyledIndexCard href={href} target={target}>
-        <StyledIndexCardTitle>{title} &rarr;</StyledIndexCardTitle>
-        <StyledIndexCardDescription>{description}</StyledIndexCardDescription>
-    </StyledIndexCard>)
+import {
+  StyledIndexCard,
+  StyledIndexCardTitle,
+  StyledIndexCardDescription,
+} from "./private.IndexCard.styled";
+
+const IndexCard = ({ title, description, href, target }) => (
+  <Link href={href} target={target}>
+    <StyledIndexCard>
+      <StyledIndexCardTitle>{title} &rarr;</StyledIndexCardTitle>
+    </StyledIndexCard>
+  </Link>
+);
 
 export default IndexCard;

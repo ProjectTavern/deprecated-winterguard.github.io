@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const StyledIndexCard = styled.a`
-  margin: 1rem;
+  margin: 0.5rem 0;
   flex-basis: 45%;
   padding: 1.5rem;
   text-align: left;
@@ -10,7 +10,8 @@ const StyledIndexCard = styled.a`
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-        
+  min-width: 320px;
+  max-width: 320px;
   &:hover,
   &:focus,
   &:active {
@@ -20,7 +21,6 @@ const StyledIndexCard = styled.a`
 `;
 
 const StyledIndexCardTitle = styled.h3`
-  margin: 0 0 1rem 0;
   font-size: 1.5rem;
 `;
 
