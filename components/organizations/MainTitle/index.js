@@ -1,15 +1,17 @@
 import React from "react";
 import {
-  StyledMainTitle,
   StyledMainTitleLink,
-  StyledMainTitleDescription,
+  StyledHeadingTitle,
 } from "./private.MainTitle.styled";
 
-const MainTitle = ({ title, description, href }) => (
+const MainTitle = ({ title, href }) => (
   <React.Fragment>
-    <StyledMainTitle>
-      <StyledMainTitleLink href={href}>{title}</StyledMainTitleLink>
-    </StyledMainTitle>
+    <StyledMainTitleLink href={href}>
+      <StyledHeadingTitle>
+        <em>{title}</em>
+        <span>The Elementary Designer</span>
+      </StyledHeadingTitle>
+    </StyledMainTitleLink>
   </React.Fragment>
 );
 

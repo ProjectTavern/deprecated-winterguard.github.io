@@ -1,19 +1,26 @@
 import styled from "styled-components";
 
-const StyledMainTitle = styled.div`
-  border: 1px solid #020202;
-`;
-
 const StyledMainTitleLink = styled.a`
   display: block;
-  color: #0070f3;
+  padding: 40px 16px;
+  background: #ea1717;
+  color: #fff;
   text-decoration: none;
 `;
 
-const StyledMainTitleDescription = styled.p`
-  text-align: center;
-  line-height: 1.5;
-  font-size: 1.5rem;
+const StyledHeadingTitle = styled.h1`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  em {
+    font-size: 3.2rem;
+    font-weight: bolder;
+    margin-bottom: 8px;
+  }
+  span {
+    font-size: 1.2rem;
+  }
 `;
 
-export { StyledMainTitle, StyledMainTitleLink, StyledMainTitleDescription };
+export { StyledMainTitleLink, StyledHeadingTitle };
