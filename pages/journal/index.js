@@ -1,7 +1,8 @@
+import React from "react";
 import { useRouter } from "next/router";
 
 import { PostList } from "@/components/templates";
-import { getPosts } from '@/preAPI/posts'
+import { getPosts } from "@/preAPI/posts";
 
 const Journal = ({ posts }) => {
   const router = useRouter();
@@ -17,18 +18,16 @@ const Journal = ({ posts }) => {
 
 const getStaticProps = async ({ params, preview = false, previewData }) => {
   const posts = await getPosts({
-    categoryURI: 'journal'
+    categoryURI: "journal",
   });
-  posts.forEach(post => delete post.orig);
+  posts.forEach((post) => delete post.orig);
 
   return {
     props: {
-      posts
-    }
-  }
-}
+      posts,
+    },
+  };
+};
 
 export default Journal;
-export {
-  getStaticProps
-}
+export { getStaticProps };
