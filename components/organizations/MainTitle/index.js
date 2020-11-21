@@ -5,14 +5,12 @@ import {
 } from "./private.MainTitle.styled";
 
 const MainTitle = ({ title, href }) => (
-  <React.Fragment>
-    <StyledMainTitleLink href={href}>
-      <StyledHeadingTitle>
-        <em>{title}</em>
-        <span>The Elementary Designer</span>
-      </StyledHeadingTitle>
-    </StyledMainTitleLink>
-  </React.Fragment>
+  <StyledMainTitleLink href={href}>
+    <StyledHeadingTitle>
+      <em>{title}</em>
+      <span>The Elementary Designer</span>
+    </StyledHeadingTitle>
+  </StyledMainTitleLink>
 );
 
 export default MainTitle;

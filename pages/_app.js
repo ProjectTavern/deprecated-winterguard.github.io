@@ -3,8 +3,9 @@ import "../styles/globals.css";
 
 // import { RemoteMenu } from "@/components/organizations";
 import { Header, Main, Footer } from "@/layouts/index.js";
-import { MainTitle, IndexCardList } from "@/components/organizations";
-import { mainTitle, indexCards } from "../store/dummydata";
+import { MainTitle, MainMenu } from "@/components/organizations";
+
+import { mainTitle } from "../store/dummydata";
 
 const theme = {
   colors: {
@@ -19,6 +20,7 @@ function MyApp({ Component, pageProps }) {
       <Header>
         <MainTitle {...mainTitle} />
       </Header>
+      <MainMenu />
       <Main>
         <Component {...pageProps} />
       </Main>
