@@ -15,8 +15,17 @@ const MainMenu = ({}) => (
       <Link href="/journal">Journal</Link>
     </StyledMenuItem>
     <StyledMenuItem>
-      <Link href="/algorithm">Algorithm</Link>
+      <Link href="/development">Development</Link>
     </StyledMenuItem>
+    <StyledMenuItem>
+      <Link href="/movies">Movies</Link>
+    </StyledMenuItem>
+    <StyledMenuItem>
+      <Link href="/pictures">Pictures</Link>
+    </StyledMenuItem>
+    {/* <StyledMenuItem>
+      <Link href="/algorithm">Algorithm</Link>
+    </StyledMenuItem> */}
     <StyledMenuItem>
       <Link href="/portfolio">Portfolio</Link>
     </StyledMenuItem>
