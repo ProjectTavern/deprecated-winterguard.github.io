@@ -30,7 +30,7 @@ const MainMenu = ({}) => (
       <Link href="/portfolio">Portfolio</Link>
     </StyledMenuItem>
     <StyledMenuItem>
-      <Link href="profile">Profile</Link>
+      <Link href="/profile">Profile</Link>
     </StyledMenuItem>
   </StyledMenu>
 );
