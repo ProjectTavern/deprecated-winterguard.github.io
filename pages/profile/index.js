@@ -1,7 +1,10 @@
-const About = () => {
+import { Profile } from "@/components/templates";
+
+const PageProfile = () => {
   return (
     <div>
       <h2>Profile</h2>
+      <Profile />
       <div>
         <section className="skills">
           <h3>Skills</h3>
@@ -66,4 +69,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default PageProfile;
