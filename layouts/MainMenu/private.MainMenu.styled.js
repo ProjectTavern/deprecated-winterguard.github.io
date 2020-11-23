@@ -14,7 +14,8 @@ const StyledMenuItem = styled.li`
     padding: 16px 0;
   }
 
-  &:hover {
+  &:hover,
+  &.on {
     color: #fff;
     background: #000;
   }
