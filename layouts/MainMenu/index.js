@@ -10,8 +10,8 @@ const mainMenus = [
   { title: "Diary", href: "/diary" },
   { title: "Journal", href: "/journal" },
   { title: "Development", href: "/development" },
-  { title: "Movies", href: "/movies" },
-  { title: "Pictures", href: "/pictures" },
+  { title: "Movie", href: "/movie" },
+  { title: "Picture", href: "/picture" },
   { title: "Portfolio", href: "/portfolio" },
   { title: "Profile", href: "/profile" },
 ];

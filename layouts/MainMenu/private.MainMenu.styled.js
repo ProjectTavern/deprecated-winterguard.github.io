@@ -7,11 +7,9 @@ const StyledMenu = styled.menu`
   border-bottom: 1px solid #d5d5d5;
 `;
 const StyledMenuItem = styled.li`
-  padding: 0 16px;
-
   a {
     display: block;
-    padding: 16px 0;
+    padding: 16px;
   }
 
   &:hover,
