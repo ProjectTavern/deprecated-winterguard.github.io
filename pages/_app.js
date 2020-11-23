@@ -2,8 +2,7 @@ import { createGlobalStyle, ThemeProvider } from "styled-components";
 import "../styles/globals.css";
 
 // import { RemoteMenu } from "@/components/organizations";
-import { Header, Main, Footer } from "@/layouts/index.js";
-import { MainTitle, MainMenu } from "@/components/organizations";
+import { Header, MainTitle, Main, MainMenu, Footer } from "@/layouts/index.js";
 
 import { mainTitle } from "../store/dummydata";
 
