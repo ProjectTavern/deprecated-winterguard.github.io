@@ -26,8 +26,7 @@ const StyledSkillSection = styled.section`
 
   img {
     display: block;
-    width: 100%;
-    margin-bottom: 1.6rem;
+    width: 120px;
   }
 `;
 

@@ -37,7 +37,17 @@ const Profile = ({}) => {
           {skills.map((skill) => {
             return (
               <li key={skill.title}>
-                <img src={skill.imageAddress} />
+                <div
+                  style={{
+                    display: "flex",
+                    width: "inherit",
+                    height: "100%",
+                    alignItems: "center",
+                    padding: "1.6rem",
+                  }}
+                >
+                  <img src={skill.imageAddress} />
+                </div>
                 <strong>{skill.title}</strong>
               </li>
             );
