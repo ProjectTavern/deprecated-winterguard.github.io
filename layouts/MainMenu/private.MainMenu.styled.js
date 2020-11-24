@@ -5,6 +5,7 @@ const StyledMenu = styled.menu`
   padding: 0 32px;
   border-top: 1px solid #d5d5d5;
   border-bottom: 1px solid #d5d5d5;
+  overflow: scroll;
 `;
 const StyledMenuItem = styled.li`
   a {
