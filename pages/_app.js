@@ -1,4 +1,5 @@
 import { createGlobalStyle, ThemeProvider } from "styled-components";
+import "../styles/reset.css";
 import "../styles/globals.css";
 
 // import { RemoteMenu } from "@/components/organizations";

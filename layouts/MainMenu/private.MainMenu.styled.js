@@ -13,7 +13,7 @@ const StyledMenu = styled.menu`
 const StyledMenuItem = styled.li`
   a {
     display: block;
-    padding: 16px;
+    padding: 12px;
   }
 
   &:hover,
