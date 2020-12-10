@@ -1,5 +1,5 @@
 import { Developments } from "@/components/templates";
 
-const DevelopmentsPage = () => <Developments>DevelopmentPage</Developments>;
+const DevelopmentsPage = () => <Developments>Development</Developments>;
 
 export default DevelopmentsPage;
