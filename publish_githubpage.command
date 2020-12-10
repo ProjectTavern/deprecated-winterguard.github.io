@@ -1,9 +1,9 @@
 #!/bin/bash
 
-dist_directory="out"
+dist_directory=out
 
 function next_build {
-    next build
+    npm run build
 }
 
 function publish_repository {
@@ -21,4 +21,4 @@ function publish_repository {
 }
 
 next_build
-publish_repository dist_directory
+publish_repository ${dist_directory}
