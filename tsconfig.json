@@ -30,6 +30,9 @@
       ],
       "@/preAPI/*": [
         "preAPI/*"
+      ],
+      "@/store/*": [
+        "store/*"
       ]
     }
   },

@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 
-import document from "@/config/document";
+import document from "@/store/document";
 
 export default function Home() {
   return (

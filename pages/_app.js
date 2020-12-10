@@ -5,7 +5,7 @@ import "../styles/globals.css";
 // import { RemoteMenu } from "@/components/organizations";
 import { Header, MainTitle, Main, MainMenu, Footer } from "@/layouts/index.js";
 
-import { mainTitle } from "../store/dummydata";
+import { mainTitle } from "@/store/dummydata";
 
 const theme = {
   colors: {

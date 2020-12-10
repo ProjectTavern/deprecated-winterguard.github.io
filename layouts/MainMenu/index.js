@@ -9,7 +9,7 @@ const mainMenus = [
   { title: "News", href: "/news" },
   { title: "Diary", href: "/diary" },
   { title: "Journal", href: "/journal" },
-  { title: "Development", href: "/development" },
+  { title: "Developments", href: "/developments" },
   { title: "Movie", href: "/movie" },
   { title: "Picture", href: "/picture" },
   { title: "Portfolio", href: "/portfolio" },
