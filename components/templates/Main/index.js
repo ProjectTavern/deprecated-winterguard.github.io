@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import {
   StyledMain,
   StyledMainList,
@@ -11,12 +13,18 @@ const Main = () => {
       <StyledMainList>
         {new Array(5).fill(1).map((element, index) => (
           <StyledMainCard key={index}>
-            <span className="main_card_image__wrapper">
-              <img src="" />
-            </span>
+            <div className="main_card_image__wrapper">
+              <Link href="/">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" />
+              </Link>
+            </div>
             <div className="main_card_story">
-              <strong className="main_card_title"></strong>
-              <span className="main_card_contents"></span>
+              <h3 className="main_card_category">
+                <Link href="/">Developments</Link>
+              </h3>
+              <h4 className="main_card_title">
+                <Link href="/">Understanding Spring and Spring boot</Link>
+              </h4>
             </div>
           </StyledMainCard>
         ))}

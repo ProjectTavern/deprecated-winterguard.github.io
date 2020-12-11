@@ -3,6 +3,7 @@ import styled from "styled-components";
 const StyledMenu = styled.menu`
   display: flex;
   position: sticky;
+  z-index: 9000;
   top: -1px;
   padding: 0 32px;
   border-top: 1px solid #d5d5d5;
