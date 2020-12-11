@@ -21,11 +21,6 @@ const StyledMainListItem = styled.li`
   &:nth-child(1) {
     grid-column: 1 / span 3;
     grid-row: 1 / span 2;
-
-    .main_card_image__wrapper {
-      padding-top: 100%;
-      flex: 1 1;
-    }
   }
 
   &:nth-child(2) {

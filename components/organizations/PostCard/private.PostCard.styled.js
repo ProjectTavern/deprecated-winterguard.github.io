@@ -3,15 +3,13 @@ import styled from "styled-components";
 const StyledPostCard = styled.section`
   display: flex;
   flex-direction: column;
-  flex: 1 auto;
   border: 1px solid #e6e6e6;
   height: 100%;
   min-height: 240px;
 
-  .post_card_image__wrapper {
-    flex: 1 1;
+  .post-card-image-container {
+    flex-grow: 1;
     position: relative;
-    padding-top: 56.25%;
     overflow: hidden;
     cursor: pointer;
   }
@@ -27,17 +25,17 @@ const StyledPostCard = styled.section`
     object-fit: cover;
   }
 
-  .post_card_story {
+  .post-card-story {
     padding: 16px 16px 20px 16px;
     border-top: 1px solid #e6e6e6;
   }
 
-  .post_card_category {
+  .post-card-category {
     font-size: 1rem;
     margin-bottom: 16px;
   }
 
-  .post_card_title {
+  .post-card-title {
     font-size: 1.2rem;
     letter-spacing: -0.5px;
   }
