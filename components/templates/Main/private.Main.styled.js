@@ -15,13 +15,8 @@ const StyledMainList = styled.ul`
   min-height: 440px;
 `;
 
-const StyledMainCard = styled.li`
-  display: flex;
-  flex-direction: column;
-  flex: 1 auto;
-  border: 1px solid #e6e6e6;
-  margin: 4px;
-  min-height: 240px;
+const StyledMainListItem = styled.li`
+  padding: 4px;
 
   &:nth-child(1) {
     grid-column: 1 / span 3;
@@ -52,39 +47,6 @@ const StyledMainCard = styled.li`
     grid-column: 6 / span 2;
     grid-row: 2 / span 1;
   }
-
-  .main_card_image__wrapper {
-    flex: 1 1;
-    position: relative;
-    padding-top: 56.25%;
-    overflow: hidden;
-
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
-  .main_card_story {
-    padding: 16px;
-    border-top: 1px solid #e6e6e6;
-
-    .main_card_category {
-      font-size: 1rem;
-      margin-bottom: 16px;
-    }
-
-    .main_card_title {
-      font-size: 1.2rem;
-      letter-spacing: -0.5px;
-    }
-  }
 `;
 
-export { StyledMain, StyledMainList, StyledMainCard };
+export { StyledMain, StyledMainList, StyledMainListItem };
