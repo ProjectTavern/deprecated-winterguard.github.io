@@ -2,8 +2,6 @@ import { createGlobalStyle, ThemeProvider } from "styled-components";
 import "../styles/reset.css";
 import "../styles/fonts.css";
 import "../styles/globals.css";
-
-// import { RemoteMenu } from "@/components/organizations";
 import { Header, MainTitle, Main, MainMenu, Footer } from "@/layouts/index.js";
 
 import { mainTitle } from "@/store/dummydata";
@@ -17,7 +15,6 @@ const theme = {
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
-      {/* <RemoteMenu indexCards={indexCards} /> */}
       <Header>
         <MainTitle {...mainTitle} />
       </Header>
