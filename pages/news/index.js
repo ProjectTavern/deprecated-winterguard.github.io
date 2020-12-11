@@ -1,3 +1,7 @@
-const NewsPage = () => <div>News Page</div>;
+import { News } from "@/components/templates";
+
+const NewsPage = () => {
+  return <News />;
+};
 
 export default NewsPage;
