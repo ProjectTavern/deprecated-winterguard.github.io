@@ -6,31 +6,33 @@ import {
 import JournalItem from "./JournalItem";
 
 const Journal = ({ posts = [] }) => {
-  const parsePostsOrderByDate = (journalPosts) => {
-    const journalPostsOrderByDate = {};
-    journalPosts.forEach((journalPost) => {
-      const { writtenAt } = journalPost;
-      const [yearMonth] = writtenAt.match(/\w{4}-\w{2}/);
-      if (journalPostsOrderByDate[yearMonth]) {
-        return journalPostsOrderByDate[yearMonth].push(journalPost);
-      }
-      return (journalPostsOrderByDate[yearMonth] = [journalPost]);
-    });
+  console.log(posts);
 
-    return journalPostsOrderByDate;
-  };
+  // const parsePostsOrderByDate = (journalPosts) => {
+  //   const journalPostsOrderByDate = {};
+  //   journalPosts.forEach((journalPost) => {
+  //     const { writtenAt } = journalPost;
+  //     const [yearMonth] = writtenAt.match(/\w{4}-\w{2}/);
+  //     if (journalPostsOrderByDate[yearMonth]) {
+  //       return journalPostsOrderByDate[yearMonth].push(journalPost);
+  //     }
+  //     return (journalPostsOrderByDate[yearMonth] = [journalPost]);
+  //   });
 
-  const sortedPosts = posts.sort((prevPost, nextPost) =>
-    nextPost.writtenAt.localeCompare(prevPost.writtenAt)
-  );
+  //   return journalPostsOrderByDate;
+  // };
 
-  const journalPostsOrderByDate = Object.entries(
-    parsePostsOrderByDate(sortedPosts)
-  ).sort(([prevDate], [nextDate]) => nextDate.localeCompare(prevDate));
+  // const sortedPosts = posts.sort((prevPost, nextPost) =>
+  //   nextPost.writtenAt.localeCompare(prevPost.writtenAt)
+  // );
+
+  // const journalPostsOrderByDate = Object.entries(
+  //   parsePostsOrderByDate(sortedPosts)
+  // ).sort(([prevDate], [nextDate]) => nextDate.localeCompare(prevDate));
 
   return (
     <StyledJournalContainer>
-      <h2>Journal</h2>
+      {/* <h2>Journal</h2>
       <StyledJournalHistoryTable>
         <colgroup>
           <col width="10%" />
@@ -70,7 +72,7 @@ const Journal = ({ posts = [] }) => {
             );
           })}
         </tbody>
-      </StyledJournalHistoryTable>
+      </StyledJournalHistoryTable> */}
     </StyledJournalContainer>
   );
 };

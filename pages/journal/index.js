@@ -4,22 +4,21 @@ import { useRouter } from "next/router";
 import { Journal } from "@/components/templates";
 import { getPosts } from "@/preAPI/posts";
 
-const JournalPage = ({ posts }) => {
+const JournalPage = ({ journalPosts }) => {
   const router = useRouter();
   const { category } = router.query;
 
-  return <Journal category={category} posts={posts} />;
+  return <Journal category={category} posts={journalPosts} />;
 };
 
 const getStaticProps = async ({ params, preview = false, previewData }) => {
-  const posts = await getPosts({
+  const journalPosts = await getPosts({
     categoryURI: "journal",
   });
-  posts.forEach((post) => delete post.orig);
 
   return {
     props: {
-      posts,
+      journalPosts,
     },
   };
 };
