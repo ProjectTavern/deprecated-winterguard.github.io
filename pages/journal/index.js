@@ -8,12 +8,7 @@ const JournalPage = ({ posts }) => {
   const router = useRouter();
   const { category } = router.query;
 
-  return (
-    <React.Fragment>
-      <h2>Journal</h2>
-      <Journal category={category} posts={posts} />
-    </React.Fragment>
-  );
+  return <Journal category={category} posts={posts} />;
 };
 
 const getStaticProps = async ({ params, preview = false, previewData }) => {
