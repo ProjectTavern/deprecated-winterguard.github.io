@@ -1,17 +1,17 @@
 import React from "react";
 import { useRouter } from "next/router";
 
-import { PostList } from "@/components/templates";
+import { Journal } from "@/components/templates";
 import { getPosts } from "@/preAPI/posts";
 
-const Journal = ({ posts }) => {
+const JournalPage = ({ posts }) => {
   const router = useRouter();
   const { category } = router.query;
 
   return (
     <React.Fragment>
       <h2>Journal</h2>
-      <PostList category={category} posts={posts} />
+      <Journal category={category} posts={posts} />
     </React.Fragment>
   );
 };
@@ -29,5 +29,5 @@ const getStaticProps = async ({ params, preview = false, previewData }) => {
   };
 };
 
-export default Journal;
+export default JournalPage;
 export { getStaticProps };

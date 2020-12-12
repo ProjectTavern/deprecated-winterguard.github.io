@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-const StyledPostListContainer = styled.div``;
+const StyledJournalContainer = styled.div``;
 
-const StyledPostList = styled.ul`
+const StyledJournal = styled.ul`
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -10,4 +10,4 @@ const StyledPostList = styled.ul`
   padding: 40px 0;
 `;
 
-export { StyledPostListContainer, StyledPostList };
+export { StyledJournalContainer, StyledJournal };
