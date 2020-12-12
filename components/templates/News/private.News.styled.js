@@ -11,6 +11,12 @@ const StyledNews = styled.section`
       padding: 4px;
     }
   }
+
+  @media (max-width: 1024px) {
+    ul {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 `;
 
 const StyledNewsMain = styled.section`
@@ -31,7 +37,6 @@ const StyledNewsMain = styled.section`
   .news-main {
     position: relative;
     overflow: hidden;
-    // padding-top: 56.25%;
     padding-top: 40%;
     cursor: pointer;
   }
@@ -45,6 +50,18 @@ const StyledNewsMain = styled.section`
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  @media (max-width: 1024px) {
+    .news-main {
+      padding-top: 56.25%;
+    }
+
+    h3 {
+      left: 1rem;
+      bottom: 1rem;
+      font-size: 1.4rem;
+    }
   }
 `;
 

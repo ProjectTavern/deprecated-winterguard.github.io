@@ -13,6 +13,10 @@ const StyledMain = styled.section`
 const StyledMainList = styled.ul`
   display: grid;
   min-height: 440px;
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
 `;
 
 const StyledMainListItem = styled.li`
