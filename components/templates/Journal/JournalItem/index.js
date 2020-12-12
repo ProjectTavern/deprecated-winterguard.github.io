@@ -8,12 +8,12 @@ import {
 
 const JournalItem = ({ children, post }) => {
   return (
-    <StyledJournalItem>
-      <Link href={post.slug}>
+    <Link href={post.slug}>
+      <StyledJournalItem>
         <StyledJournalTitle>{post.title}</StyledJournalTitle>
-      </Link>
-      <StyledJournalDate>{post.writtenAt}</StyledJournalDate>
-    </StyledJournalItem>
+        <StyledJournalDate>{post.writtenAt}</StyledJournalDate>
+      </StyledJournalItem>
+    </Link>
   );
 };
 
