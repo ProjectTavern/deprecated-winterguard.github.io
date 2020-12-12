@@ -1,18 +1,13 @@
 import React from "react";
 import { getPosts, getPost } from "@/preAPI/posts";
-import { Post } from "@/components/templates";
+import { PostArticle } from "@/components/templates";
 
 const pageConfig = {
   categoryURI: "journal",
 };
 
-const JournalPost = ({ post }) => {
-  return (
-    <React.Fragment>
-      <h1>Journal</h1>
-      <Post post={post} />
-    </React.Fragment>
-  );
+const JournalPostPage = ({ post }) => {
+  return <PostArticle post={post} />;
 };
 
 /**
@@ -25,15 +20,38 @@ const parseStaticPathByEnvironment = (target) => {
   const environment = process.env.NODE_ENV;
   const isProduction = environment === "production";
   const filteredTargetName = target.replace(".md", "");
-
-  return isProduction ? filteredTargetName : encodeURI(filteredTargetName);
+  const targetParams = filteredTargetName.split("/");
+  const [, classification, postName] = targetParams;
+  const encodedPostName = isProduction ? postName : encodeURI(postName);
+  return {
+    classification,
+    postName: encodedPostName,
+  };
 };
 
 const getStaticPaths = async () => {
   const allPosts = await getPosts(pageConfig);
-  const paths = allPosts.map(({ filename }) => ({
-    params: { postName: parseStaticPathByEnvironment(filename) },
-  }));
+
+  function setLinearPosts(category) {
+    let posts = [];
+    function renderPosts(category) {
+      posts = [...posts, ...category.posts];
+    }
+    if (category.children) {
+      category.children.forEach((child) => {
+        renderPosts(child);
+      });
+    }
+
+    return posts;
+  }
+
+  const posts = setLinearPosts(allPosts);
+  const paths = posts.map(({ key }) => {
+    const params = parseStaticPathByEnvironment(key);
+
+    return { params };
+  });
 
   return {
     paths,
@@ -42,8 +60,7 @@ const getStaticPaths = async () => {
 };
 
 const getStaticProps = async ({ params, preview = false, previewData }) => {
-  const { postName } = params;
-  const payload = Object.assign({ postName }, pageConfig);
+  const payload = Object.assign({ params }, pageConfig);
   const post = await getPost(payload);
 
   return {
@@ -55,4 +72,4 @@ const getStaticProps = async ({ params, preview = false, previewData }) => {
 
 export { getStaticPaths, getStaticProps };
 
-export default JournalPost;
+export default JournalPostPage;

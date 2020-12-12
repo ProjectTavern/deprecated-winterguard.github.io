@@ -118,6 +118,9 @@ const Journal = ({ posts = {} }) => {
       <StyledJournalHistoryTable>
         <colgroup>
           <col width="10%" />
+          <col width="30%" />
+          <col width="30%" />
+          <col width="30%" />
         </colgroup>
         <TableHead posts={posts} />
         <TableBody posts={posts} />

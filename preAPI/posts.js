@@ -1,6 +1,23 @@
 import matter from "gray-matter";
 import marked from "marked";
 
+marked.setOptions({
+  renderer: new marked.Renderer(),
+  highlight: function (code, language) {
+    const hljs = require("highlight.js");
+    const validLanguage = hljs.getLanguage(language) ? language : "plaintext";
+
+    return hljs.highlight(validLanguage, code).value;
+  },
+  pedantic: false,
+  gfm: true,
+  breaks: false,
+  sanitize: false,
+  smartLists: true,
+  smartypants: false,
+  xhtml: false,
+});
+
 export const getPosts = async (payload = {}) => {
   const { categoryURI = "" } = payload;
   const context = require.context(`../contents`, true, /\.(md|html)$/);
@@ -78,8 +95,11 @@ export const getPosts = async (payload = {}) => {
   return posts.find((post) => post.key === categoryURI);
 };
 
-export const getPost = async ({ postName, categoryURI }) => {
-  const fileContent = await import(`../contents/${categoryURI}/${postName}.md`);
+export const getPost = async ({ categoryURI, params }) => {
+  const { classification, postName } = params;
+  const fileContent = await import(
+    `../contents/${categoryURI}/${classification}/${postName}.md`
+  );
   const mattered = matter(fileContent.default);
   const content = marked(mattered.content);
 
