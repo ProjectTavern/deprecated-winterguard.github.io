@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const StyledMenu = styled.menu`
+  grid-area: menu;
   display: flex;
   position: sticky;
   z-index: 9000;
