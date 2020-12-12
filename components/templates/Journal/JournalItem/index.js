@@ -10,7 +10,7 @@ const JournalItem = ({ children, post }) => {
   return (
     <StyledJournalItem>
       <Link href={post.slug}>
-        <StyledJournalTitle>{children}</StyledJournalTitle>
+        <StyledJournalTitle>{post.title}</StyledJournalTitle>
       </Link>
       <StyledJournalDate>{post.writtenAt}</StyledJournalDate>
     </StyledJournalItem>

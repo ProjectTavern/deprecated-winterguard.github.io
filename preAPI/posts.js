@@ -8,11 +8,6 @@ export const getPosts = async (payload = {}) => {
 
   for (const key of context.keys()) {
     const postURI = key.slice(2);
-
-    if (categoryURI && !postURI.includes(categoryURI)) {
-      continue;
-    }
-
     const post = await import(`../contents/${postURI}`);
     const mattered = matter(post.default);
     delete mattered.orig;
@@ -35,6 +30,7 @@ export const getPosts = async (payload = {}) => {
       categories,
       postURI,
       ...mattered,
+      ...mattered.data,
       content,
     };
 
@@ -79,7 +75,7 @@ export const getPosts = async (payload = {}) => {
     setKeyJournalPosts(keySet, posts);
   }
 
-  return posts;
+  return posts.find((post) => post.key === categoryURI);
 };
 
 export const getPost = async ({ postName, categoryURI }) => {
