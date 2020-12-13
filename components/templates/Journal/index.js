@@ -9,7 +9,7 @@ import JournalItem from "./JournalItem";
 
 const Journal = ({ posts = {} }) => {
   const [deviceMediaType, setDeviceMediaType] = useState("pc");
-  const [updatedPosts, setUpdatedPosts] = useState({ ...posts });
+  const [updatedPosts, setUpdatedPosts] = useState(null);
 
   const generateMobilePosts = (posts) => {
     const parentCategory = {
@@ -50,7 +50,10 @@ const Journal = ({ posts = {} }) => {
       }
     };
 
+    checkDeviceType();
     window.addEventListener("resize", checkDeviceType);
+
+    return () => window.removeEventListener("resize", checkDeviceType);
   }, []);
 
   useEffect(() => {
@@ -61,9 +64,10 @@ const Journal = ({ posts = {} }) => {
       }
       default: {
         setUpdatedPosts(mobilePosts);
-        console.log("setMobile");
       }
     }
+
+    return () => setUpdatedPosts(null);
   }, [deviceMediaType]);
 
   const parsePostsOrderByDate = (journalPosts, key) => {
@@ -173,7 +177,7 @@ const Journal = ({ posts = {} }) => {
   };
 
   if (!updatedPosts) {
-    return <div></div>;
+    return <StyledJournalContainer></StyledJournalContainer>;
   }
 
   return (
