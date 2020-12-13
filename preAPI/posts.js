@@ -92,7 +92,11 @@ export const getPosts = async (payload = {}) => {
     setKeyJournalPosts(keySet, posts);
   }
 
-  return posts.find((post) => post.key === categoryURI);
+  let responsePosts = categoryURI
+    ? posts.find((post) => post.key === categoryURI)
+    : posts;
+
+  return responsePosts;
 };
 
 export const getPost = async ({ categoryURI, params }) => {
