@@ -1,3 +1,5 @@
+import React, { useState, useRef, useEffect } from "react";
+
 import {
   StyledJournalContainer,
   StyledJournalHistoryTable,
@@ -6,6 +8,64 @@ import {
 import JournalItem from "./JournalItem";
 
 const Journal = ({ posts = {} }) => {
+  const [deviceMediaType, setDeviceMediaType] = useState("pc");
+  const [updatedPosts, setUpdatedPosts] = useState({ ...posts });
+
+  const generateMobilePosts = (posts) => {
+    const parentCategory = {
+      key: "journal",
+      posts: [],
+      children: [
+        {
+          key: "",
+          posts: [],
+        },
+      ],
+    };
+
+    posts.children.forEach(
+      (child) =>
+        (parentCategory.children[0].posts = [
+          ...parentCategory.children[0].posts,
+          ...child.posts,
+        ])
+    );
+    parentCategory.children[0].posts.sort((a, b) =>
+      a.filename.localeCompare(b.filename)
+    );
+
+    return parentCategory;
+  };
+
+  const pcPosts = { ...posts };
+  const mobilePosts = generateMobilePosts(posts);
+
+  useEffect(() => {
+    const checkDeviceType = () => {
+      const divisionMediaWidth = 768;
+      if (window.innerWidth > divisionMediaWidth) {
+        setDeviceMediaType("pc");
+      } else if (window.innerWidth <= divisionMediaWidth) {
+        setDeviceMediaType("mobile");
+      }
+    };
+
+    window.addEventListener("resize", checkDeviceType);
+  }, []);
+
+  useEffect(() => {
+    switch (deviceMediaType) {
+      case "pc": {
+        setUpdatedPosts(pcPosts);
+        break;
+      }
+      default: {
+        setUpdatedPosts(mobilePosts);
+        console.log("setMobile");
+      }
+    }
+  }, [deviceMediaType]);
+
   const parsePostsOrderByDate = (journalPosts, key) => {
     const journalPostsOrderByDate = {};
     journalPosts.forEach((journalPost) => {
@@ -112,6 +172,10 @@ const Journal = ({ posts = {} }) => {
     );
   };
 
+  if (!updatedPosts) {
+    return <div></div>;
+  }
+
   return (
     <StyledJournalContainer>
       <h2>Journal</h2>
@@ -122,8 +186,8 @@ const Journal = ({ posts = {} }) => {
           <col width="30%" />
           <col width="30%" />
         </colgroup>
-        <TableHead posts={posts} />
-        <TableBody posts={posts} />
+        <TableHead posts={updatedPosts} />
+        <TableBody posts={updatedPosts} />
         {/* <tbody>
           {journalPostsOrderByDate.map(([key, journalPosts]) => {
             return (
