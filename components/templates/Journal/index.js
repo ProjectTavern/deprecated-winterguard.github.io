@@ -8,7 +8,7 @@ import {
 import JournalItem from "./JournalItem";
 
 const Journal = ({ posts = {} }) => {
-  const [deviceMediaType, setDeviceMediaType] = useState("pc");
+  const [deviceMediaType, setDeviceMediaType] = useState(null);
   const [updatedPosts, setUpdatedPosts] = useState(null);
 
   const generateMobilePosts = (posts) => {
@@ -62,8 +62,11 @@ const Journal = ({ posts = {} }) => {
         setUpdatedPosts(pcPosts);
         break;
       }
-      default: {
+      case "mobile": {
         setUpdatedPosts(mobilePosts);
+        break;
+      }
+      default: {
       }
     }
 
