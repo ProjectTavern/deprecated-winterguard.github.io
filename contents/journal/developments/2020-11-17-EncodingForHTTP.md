@@ -1,5 +1,5 @@
 ---
-title: [Knowledge] Encoding for HTTP
+title: "[Knowledge] Encoding for HTTP"
 ---
 
 # 자바스크립트의 인코딩과 HTTP 통신
