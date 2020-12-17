@@ -6,14 +6,14 @@ import {
   StyledMainListItem,
 } from "./private.Main.styled";
 
-const Main = () => {
+const Main = ({ latestPosts }) => {
   return (
     <StyledMain>
       <h2>New Posts Here !</h2>
       <StyledMainList>
-        {new Array(7).fill(1).map((element, index) => (
-          <StyledMainListItem key={index}>
-            <PostCard />
+        {latestPosts.map((post, index) => (
+          <StyledMainListItem key={post.key}>
+            <PostCard post={post} />
           </StyledMainListItem>
         ))}
       </StyledMainList>

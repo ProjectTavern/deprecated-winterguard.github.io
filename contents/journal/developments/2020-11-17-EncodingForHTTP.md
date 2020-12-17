@@ -1,5 +1,6 @@
 ---
-title: "[Knowledge] Encoding for HTTP"
+titlePrefix: Knowledge
+title: "Encoding for HTTP"
 ---
 
 # 자바스크립트의 인코딩과 HTTP 통신

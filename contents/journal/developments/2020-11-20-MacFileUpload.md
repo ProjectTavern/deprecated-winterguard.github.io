@@ -1,5 +1,6 @@
 ---
-title: "[Knowledge] Mac 응용프로그램 단일 File Upload 문제"
+titlePrefix: Knowledge
+title: "Mac 응용프로그램 단일 File Upload 문제"
 ---
 
 # Mac 응용프로그램 File Upload

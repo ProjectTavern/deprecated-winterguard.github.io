@@ -114,3 +114,17 @@ export const getPost = async ({ categoryURI, params }) => {
     content,
   };
 };
+
+export const getNewsPost = async ({ categoryURI, params }) => {
+  const { postName } = params;
+  const fileContent = await import(`../contents/${categoryURI}/${postName}.md`);
+  const mattered = matter(fileContent.default);
+  const content = marked(mattered.content);
+
+  delete mattered.orig;
+
+  return {
+    ...mattered,
+    content,
+  };
+};

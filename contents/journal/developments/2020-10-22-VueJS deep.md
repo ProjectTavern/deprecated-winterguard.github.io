@@ -1,5 +1,6 @@
 ---
-title: "[VueJS] deep selector"
+titlePrefix: VueJS
+title: "deep selector"
 ---
 
 # [VueJS] deep
