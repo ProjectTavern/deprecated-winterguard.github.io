@@ -9,9 +9,9 @@ import {
 const Main = () => {
   return (
     <StyledMain>
-      <h2>Here comes the New Posts !</h2>
+      <h2>New Posts Here !</h2>
       <StyledMainList>
-        {new Array(5).fill(1).map((element, index) => (
+        {new Array(7).fill(1).map((element, index) => (
           <StyledMainListItem key={index}>
             <PostCard />
           </StyledMainListItem>

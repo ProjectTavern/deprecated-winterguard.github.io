@@ -1,4 +1,4 @@
-import { StyledHeader, StyledTitle } from "./private.Header.styled";
+import { StyledHeader } from "./private.Header.styled";
 
 const Header = ({ children }) => {
   return <StyledHeader>{children}</StyledHeader>;
