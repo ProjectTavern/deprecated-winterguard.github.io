@@ -1,10 +1,11 @@
-import { StyledPostArticle } from "./private.PostArticle.styled";
+import { StyledPost } from "./private.Post.styled";
 
 const Post = ({ category, post, children }) => {
   return (
-    <StyledPostArticle className="markdown-body">
+    <StyledPost>
+      <h2>{category}</h2>
       <section dangerouslySetInnerHTML={{ __html: post.content }} />
-    </StyledPostArticle>
+    </StyledPost>
   );
 };
 

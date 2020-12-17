@@ -12,7 +12,6 @@ const StyledPostCard = styled.section`
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    padding-top: 56.25%;
   }
 
   img {

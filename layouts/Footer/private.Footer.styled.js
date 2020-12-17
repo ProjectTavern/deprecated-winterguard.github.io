@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const StyledFooter = styled.footer`
-  grid-area: footer;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 48px;
+  width: 100%;
+  height: 100px;
   border-top: 1px solid #eaeaea;
 `;
 
@@ -14,4 +14,7 @@ const StyledFooterLink = styled.a`
   justify-content: center;
   align-items: center;
 `;
-export { StyledFooter, StyledFooterLink };
+export {
+  StyledFooter,
+  StyledFooterLink
+};

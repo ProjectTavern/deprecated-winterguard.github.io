@@ -1,10 +1,8 @@
 import styled from "styled-components";
 
 const StyledMainTitleLink = styled.a`
-  display: flex;
-  justify-contents: center;
-  align-items: center;
-  padding: 8px 16px;
+  display: block;
+  padding: 18px 16px;
   background: #ea1717;
   color: #fff;
   text-decoration: none;

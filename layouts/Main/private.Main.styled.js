@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledMain = styled.main`
-  grid-area: main;
+  min-height: 100vh;
   padding: 2.5rem 1.5rem 3rem;
   display: flex;
   flex-direction: column;

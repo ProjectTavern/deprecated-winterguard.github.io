@@ -1,20 +1,10 @@
-import React from "react";
-import { ThemeProvider } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 import "../styles/reset.css";
 import "../styles/fonts.css";
 import "../styles/globals.css";
-import "github-markdown-css";
-import "highlight.js/styles/atom-one-light.css";
-import {
-  Container,
-  Header,
-  MainTitle,
-  Main,
-  MainMenu,
-  Footer,
-} from "@/layouts/index.js";
+import { Header, MainTitle, Main, MainMenu, Footer } from "@/layouts/index.js";
 
-import { mainTitle } from "@/store/document";
+import { mainTitle } from "@/store/dummydata";
 
 const theme = {
   colors: {
@@ -25,18 +15,14 @@ const theme = {
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
-      <Container>
-        <React.Fragment>
-          <Header>
-            <MainTitle {...mainTitle} />
-          </Header>
-          <MainMenu />
-          <Main>
-            <Component {...pageProps} />
-          </Main>
-          <Footer />
-        </React.Fragment>
-      </Container>
+      <Header>
+        <MainTitle {...mainTitle} />
+      </Header>
+      <MainMenu />
+      <Main>
+        <Component {...pageProps} />
+      </Main>
+      <Footer />
     </ThemeProvider>
   );
 }

@@ -14,22 +14,23 @@ https://vue-loader.vuejs.org/guide/scoped-css.html#deep-selectors
 
 먼저 간단하게 기본형을 확인해보자.
 
-```html
+```vue
 <template>
   <div class="parent">
     parent
-    <div class="child">child</div>
+    <div class="child">
+      child
+    </div>
   </div>
 </template>
-
 <style scoped>
-  .parent {
-    color: orangered;
-  }
+.parent {
+  color: orangered;
+}
 
-  .parent .child {
-    color: blueviolet;
-  }
+.parent .child {
+  color: blueviolet;
+}
 </style>
 ```
 
@@ -37,23 +38,25 @@ https://vue-loader.vuejs.org/guide/scoped-css.html#deep-selectors
 
 그리고 CSS를 컴파일 할 때에는 확실한 Scoped의 처리를 위해서 항상 마지막 클래스에 붙인다. 위의 코드가 CSS로 컴파일 되면 다음과 같은 형태가 된다.
 
-```html
+```vue
 /* 편의상 html 이라고 가정한다. */
 <template>
   <div data-v-2a183b29 class="parent">
     parent
-    <div data-v-2a183b29 class="child">child</div>
+    <div data-v-2a183b29 class="child">
+      child
+    </div>
   </div>
 </template>
 
 <style>
-  .parent[data-v-2a183b29] {
-    color: orangered;
-  }
+.parent[data-v-2a183b29] {
+  color: orangered;
+}
 
-  .parent .child[data-v-2a183b29] {
-    color: blueviolet;
-  }
+.parent .child[data-v-2a183b29] {
+  color: blueviolet;
+}
 </style>
 ```
 
@@ -73,7 +76,7 @@ https://vue-loader.vuejs.org/guide/scoped-css.html#deep-selectors
 
 이런 점을 우선 감안하고 본론으로 넘어가도록 한다.
 
-```html
+```vue
 <template>
   <div class="parent">
     <LibraryComponent withClass="child" />
@@ -81,13 +84,13 @@ https://vue-loader.vuejs.org/guide/scoped-css.html#deep-selectors
 </template>
 
 <style scoped>
-  .parent {
-    color: orangered;
-  }
+.parent {
+  color: orangered;
+}
 
-  .parent .child {
-    color: blueviolet;
-  }
+.parent .child {
+  color: blueviolet;
+}
 </style>
 ```
 
@@ -103,7 +106,7 @@ Vue-Loader 에서 기존에는 /deep/ 의 형태로 사용해야 했지만, 이 
 
 https://github.com/vuejs/vue-loader/issues/913
 
-```html
+```vue
 <template>
   <div class="parent">
     <LibraryComponent withClass="child" />
@@ -111,19 +114,20 @@ https://github.com/vuejs/vue-loader/issues/913
 </template>
 
 <style scoped>
-  .parent {
-    color: orangered;
-  }
+.parent {
+  color: orangered;
+}
 
-  .parent >>> .child {
-    color: blueviolet;
-  }
+.parent >>> .child {
+  color: blueviolet;
+}
 </style>
 ```
 
 위와 같이 사용했을 경우 다들 예상했다시피 CSS가 다음과 같이 컴파일 된다.
 
-```html
+
+```vue
 /* 편의상 html 이라고 가정한다. */
 <template>
   <div data-v-2a183b29 class="parent">
@@ -134,13 +138,13 @@ https://github.com/vuejs/vue-loader/issues/913
 </template>
 
 <style>
-  .parent[data-v-2a183b29] {
-    color: orangered;
-  }
+.parent[data-v-2a183b29] {
+  color: orangered;
+}
 
-  .parent[data-v-2a183b29] .child {
-    color: blueviolet;
-  }
+.parent[data-v-2a183b29] .child {
+  color: blueviolet;
+}
 </style>
 ```
 
@@ -154,7 +158,8 @@ https://github.com/vuejs/vue-loader/issues/913
 
 `SCSS` 등과 같은 전처리 도구를 사용할 때에는 아주 조금 확장된 기능을 사용할 순 있다. 미리 이야기해두자면 편리할 순 있지만, 좋은 시선으로 보기 어려운 방법이기 때문에 함께 일하고 있는 경우에는 서로간의 합의와 이해가 필요한 방법이다.
 
-```html
+
+```vue
 <template>
   <div class="parent">
     <LibraryComponent withClass="child" />
@@ -162,15 +167,15 @@ https://github.com/vuejs/vue-loader/issues/913
 </template>
 
 <style scoped>
-  .parent {
-    color: orangered;
-  }
+.parent {
+  color: orangered;
+}
 
-  .parent {
-    ::v-deep .child {
-      color: blueviolet;
-    }
+.parent {
+  ::v-deep .child {
+    color: blueviolet;
   }
+}
 </style>
 ```
 
@@ -180,7 +185,7 @@ https://github.com/vuejs/vue-loader/issues/913
 
 다음 사례를 보자. 이상한 상황과 수많은 가정을 만들 수 밖에 없는 것을 양해해주기 바란다. 왜냐하면 애초에 이 기능은 극한 상황, 어쩔 수 없는 상황에서나 쓰는 것이지 자주 쓰라는 기능이 아니기 때문이다.
 
-```html
+```vue
 <template>
   <div class="grand-parent">
     <div class="a-parent">
@@ -199,36 +204,36 @@ https://github.com/vuejs/vue-loader/issues/913
 </template>
 
 <style scoped>
-  .parent {
-    color: orangered;
-  }
+.parent {
+  color: orangered;
+}
 
-  .a-parent {
-    ::v-deep .child {
-      color: chocolate;
-    }
+.a-parent {
+  ::v-deep .child {
+    color: chocolate;
   }
-  .b-parent {
-    ::v-deep .child {
-      color: darkcyan;
-    }
+}
+.b-parent {
+  ::v-deep .child {
+    color: darkcyan;
   }
-  .c-parent {
-    ::v-deep .child {
-      color: darkslategrey;
-    }
+}
+.c-parent {
+  ::v-deep .child {
+    color: darkslategrey;
   }
-  .d-parent {
-    ::v-deep .child {
-      color: blueviolet;
-    }
+}
+.d-parent {
+  ::v-deep .child {
+    color: blueviolet;
   }
+}
 </style>
 ```
 
 이렇게 부모에 따라서 하위 라이브러리 CSS를 변경해야할 때는 이렇게 늘어뜨려 써야 할 경우가 있다. 전처리 도구를 활용할 경우에는 부모와 자식 클래스를 역전(!)시켜 사용할 수 있다.
 
-```html
+```vue
 <template>
   <div class="grand-parent">
     <div class="a-parent">
@@ -247,24 +252,24 @@ https://github.com/vuejs/vue-loader/issues/913
 </template>
 
 <style scoped>
-  .parent {
-    color: orangered;
-  }
+.parent {
+  color: orangered;
+}
 
-  .child {
-    .a-parent & ::v-deep {
-      color: chocolate;
-    }
-    .b-parent & ::v-deep {
-      color: darkcyan;
-    }
-    .c-parent & ::v-deep {
-      color: darkslategrey;
-    }
-    .d-parent & ::v-deep {
-      color: blueviolet;
-    }
+.child {
+  .a-parent & ::v-deep {
+    color: chocolate;
   }
+  .b-parent & ::v-deep {
+    color: darkcyan;
+  } 
+  .c-parent & ::v-deep {
+    color: darkslategrey;
+  } 
+  .d-parent & ::v-deep {
+    color: blueviolet;
+  }
+}
 </style>
 ```
 

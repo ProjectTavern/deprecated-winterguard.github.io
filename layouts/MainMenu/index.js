@@ -5,7 +5,16 @@ import { useRouter } from "next/router";
 import { StyledMenu, StyledMenuItem } from "./private.MainMenu.styled";
 import { useCallback } from "react";
 
-import { mainMenus } from "@/store/document";
+const mainMenus = [
+  { title: "News", href: "/news" },
+  { title: "Diary", href: "/diary" },
+  { title: "Journal", href: "/journal" },
+  { title: "Developments", href: "/developments" },
+  { title: "Movie", href: "/movie" },
+  { title: "Picture", href: "/picture" },
+  { title: "Portfolio", href: "/portfolio" },
+  { title: "Profile", href: "/profile" },
+];
 
 const MainMenu = ({}) => {
   const router = useRouter();
