@@ -4,6 +4,9 @@ const StyledJournalItem = styled.section`
   display: flex;
   position: relative;
   width: 100%;
+  &:hover div {
+    border-color: #9e9e9e;
+  }
 `;
 
 const StyledJournalImageContainer = styled.div`
@@ -17,9 +20,6 @@ const StyledImageBorder = styled.div`
   overflow: hidden;
   border: 7px solid #e5e5e5;
   border-radius: 100%;
-  &:hover {
-    border-color: #9e9e9e;
-  }
   img {
     width: 100%;
     object-fit: cover;
