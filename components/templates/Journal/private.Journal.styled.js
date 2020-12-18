@@ -21,6 +21,8 @@ const StyledJournalHistoryTable = styled.table`
   tbody {
     th {
       text-align: right;
+      vertical-align: top;
+      padding-top: 10%;
     }
   }
 
