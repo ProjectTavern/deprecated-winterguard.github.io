@@ -1,0 +1,1 @@
+_N_E=(window.webpackJsonp_N_E=window.webpackJsonp_N_E||[]).push([[8],{"8vNF":function(n,e,o){(window.__NEXT_P=window.__NEXT_P||[]).push(["/developments",function(){return o("qDCG")}])},qDCG:function(n,e,o){"use strict";o.r(e);var t=o("nKUr"),_=o("sd54");e.default=function(){return Object(t.jsx)(_.a,{children:"Development"})}}},[["8vNF",0,1,2,3,4]]]);

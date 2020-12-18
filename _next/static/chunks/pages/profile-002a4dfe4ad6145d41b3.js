@@ -1,0 +1,1 @@
+_N_E=(window.webpackJsonp_N_E=window.webpackJsonp_N_E||[]).push([[17],{"8QMV":function(n,_,o){(window.__NEXT_P=window.__NEXT_P||[]).push(["/profile",function(){return o("dmPs")}])},dmPs:function(n,_,o){"use strict";o.r(_);var i=o("nKUr"),s=o("sd54");_.default=function(){return Object(i.jsx)(s.f,{})}}},[["8QMV",0,1,2,3,4]]]);
