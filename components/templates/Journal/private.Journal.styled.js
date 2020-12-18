@@ -12,6 +12,9 @@ const StyledJournalContainer = styled.section`
 const StyledJournalHistoryTable = styled.table`
   width: 100%;
   padding: 40px 0;
+  th {
+    font-size: 1.6em;
+  }
 
   .thead-history {
     font-size: 1.5rem;
@@ -20,6 +23,7 @@ const StyledJournalHistoryTable = styled.table`
 
   tbody {
     th {
+      font-size: 1.2em;
       text-align: right;
       vertical-align: top;
       padding-top: 10%;
