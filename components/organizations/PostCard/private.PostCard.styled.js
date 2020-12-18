@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const StyledPostCard = styled.section`
   display: flex;
+  position: relative;
   flex-direction: column;
   border: 1px solid #e6e6e6;
   height: 100%;
@@ -12,23 +13,19 @@ const StyledPostCard = styled.section`
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    padding-top: 56.25%;
   }
 
   img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
   .post-card-story {
+    position: absolute;
+    bottom: 0;
     padding: 16px 16px 20px 16px;
-    border-top: 1px solid #e6e6e6;
+    text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
   }
 
   .post-card-category {

@@ -2,7 +2,7 @@ import { PostCard } from "@/components/organizations";
 
 import { StyledNews, StyledNewsMain } from "./private.News.styled";
 
-const News = ({ children }) => {
+const News = ({ newsPosts }) => {
   return (
     <StyledNews>
       <StyledNewsMain>
@@ -12,12 +12,13 @@ const News = ({ children }) => {
         </div>
       </StyledNewsMain>
       <ul>
-        {new Array(5).fill(0).map((element, index) => (
+        {newsPosts.posts.map((newsPost, index) => (
           <li key={index}>
-            <PostCard />
+            <PostCard post={newsPost} />
           </li>
         ))}
       </ul>
+      <button>More</button>
     </StyledNews>
   );
 };
