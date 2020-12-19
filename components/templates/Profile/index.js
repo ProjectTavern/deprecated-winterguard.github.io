@@ -37,18 +37,12 @@ const Profile = ({}) => {
           {skills.map((skill) => {
             return (
               <li key={skill.title}>
-                <div
-                  style={{
-                    display: "flex",
-                    width: "inherit",
-                    height: "100%",
-                    alignItems: "center",
-                    padding: "1.6rem",
-                  }}
-                >
+                <div>
                   <img src={skill.imageAddress} />
                 </div>
                 <strong>{skill.title}</strong>
+                <i>1</i>
+                <em>Front-end</em>
               </li>
             );
           })}
@@ -62,34 +56,6 @@ const Profile = ({}) => {
       <h2>Profile</h2>
       <section>
         <SkillList />
-        <section className="projects">
-          <h3>History</h3>
-          <ul>
-            <li>
-              <strong>KH 정보교육원</strong>
-              <time>2017-01-12</time> ~ <time>2017-06-20</time>
-              <p></p>
-            </li>
-            <li>
-              <strong>DKTechin</strong>
-              <time>2018-01-02</time> ~ <time>Present</time>
-              <p></p>
-            </li>
-          </ul>
-        </section>
-        <section className="projects">
-          <h3>Projects</h3>
-          <ul>
-            <li>
-              <strong>다음 검색</strong>
-              <p></p>
-            </li>
-            <li>
-              <strong>다음 검색</strong>
-              <p></p>
-            </li>
-          </ul>
-        </section>
       </section>
     </StyledProfile>
   );
