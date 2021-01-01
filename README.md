@@ -1,4 +1,4 @@
-# Winterguard's Log
+# 📚 Winterguard's Log
 
 ## Project Setting
 
