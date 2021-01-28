@@ -1,5 +1,7 @@
 # 📚 Winterguard's Log
 
+> 윈터가드의 블로그입니다.
+
 ## Project Setting
 
 ### Getting Started
