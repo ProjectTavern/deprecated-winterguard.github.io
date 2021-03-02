@@ -6,6 +6,8 @@
 
 ### Getting Started
 
+> Need Lastest NPM version
+
 First, run the development server:
 
 ```bash
