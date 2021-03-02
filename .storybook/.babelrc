@@ -1,0 +1,49 @@
+{
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "usage",
+          "corejs": 3,
+          "shippedProposals": true,
+          "targets": {
+            "chrome": 58,
+            "ie": 11
+          }
+        }
+      ],
+      ["@babel/preset-react", { "runtime": "automatic"}]
+    ],
+    "plugins": [],
+    "ignore": [],
+    "env": {
+      "development": {
+        "plugins": [
+          [
+            "module-resolver",
+            {
+              "root": ["."],
+              "alias": {
+                "assets": "./src/assets",
+                "components": "./src/components"
+              }
+            }
+          ]
+        ]
+      },
+      "production": {
+        "plugins": [
+          [
+            "module-resolver",
+            {
+              "root": ["."],
+              "alias": {
+                "assets": "./public",
+                "components": "./components"
+              }
+            }
+          ]
+        ]
+      }
+    }
+  }

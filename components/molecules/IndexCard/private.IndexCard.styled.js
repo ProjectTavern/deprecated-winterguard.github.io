@@ -1,6 +1,7 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const StyledIndexCard = styled.a`
+  display: block;
   margin: 0.5rem 0;
   flex-basis: 45%;
   padding: 1.5rem;
@@ -30,8 +31,4 @@ const StyledIndexCardDescription = styled.p`
   line-height: 1.5;
 `;
 
-export {
-  StyledIndexCard,
-  StyledIndexCardTitle,
-  StyledIndexCardDescription
-};
+export { StyledIndexCard, StyledIndexCardTitle, StyledIndexCardDescription };

@@ -7,11 +7,13 @@ import {
 } from "./private.IndexCard.styled";
 
 const IndexCard = ({ title, description, href, target }) => (
-  <Link href={href} target={target}>
-    <StyledIndexCard>
-      <StyledIndexCardTitle>{title} &rarr;</StyledIndexCardTitle>
-    </StyledIndexCard>
-  </Link>
+  <StyledIndexCard href={href} target={target}>
+    <StyledIndexCardTitle>
+      {title} &rarr;
+      <br />
+      <StyledIndexCardDescription>{description}</StyledIndexCardDescription>
+    </StyledIndexCardTitle>
+  </StyledIndexCard>
 );
 
 export default IndexCard;
