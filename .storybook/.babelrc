@@ -24,8 +24,9 @@
             {
               "root": ["."],
               "alias": {
-                "assets": "./src/assets",
-                "components": "./src/components"
+                "assets": "./assets",
+                "components": "./components",
+                "@/helpers": "./helpers"
               }
             }
           ]
@@ -39,7 +40,8 @@
               "root": ["."],
               "alias": {
                 "assets": "./public",
-                "components": "./components"
+                "components": "./components",
+                "@/helpers": "./helpers"
               }
             }
           ]
